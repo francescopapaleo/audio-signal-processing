@@ -1,25 +1,36 @@
-# Table of contents structure for the Jupyter Book
 format: jb-book
-root: intro  # Introductory file
+root: intro
 
-chapters:
-  - file: content  # Main content file
-  - file: markdown  # Markdown syntax overview
-  - file: markdown-notebooks  # Markdown with Notebooks
-  - file: complex_numbers
-  - file: discrete_time_signals
-  - file: linear_and_non-linear_systems
-  - file: convolution
-  - file: filters
-  - file: quantization
-  - file: fourier_transform
-  - file: loudness
-  - file: plot_audio_with_essentia
-  - file: plot_difference
-  - file: plot_ir_waterfall
-  - file: plot_ir_zoom
-  - file: sound_music_descriptors
-  - file: sweep_tone_analysis
-  - file: CONTRIBUTING  # Contribution guidelines
-  - file: CONDUCT  # Code of conduct
-  - file: LICENSE  # License information
+parts:
+  - caption: Signal Processing Basics
+    chapters:
+      - file: complex_numbers
+      - file: discrete_time_signals
+      - file: linear_and_non-linear_systems
+      - file: convolution
+      - file: filters
+      - file: quantization
+
+  - caption: Fourier Transform
+    chapters:
+      - file: fourier_transform
+      
+  - caption: Audio Analysis and Visualization
+    chapters:
+      - file: sweep_tone_analysis
+        sections:
+          - file: plot_audio_with_essentia
+          - file: plot_difference
+          - file: plot_ir_waterfall
+          - file: plot_ir_zoom
+      - file: loudness
+
+  - caption: Sound and Music Descriptors
+    chapters:
+      - file: sound_music_descriptors
+
+  - caption: Additional Information
+    chapters:
+      - file: CONTRIBUTING  # Contribution guidelines
+      - file: CONDUCT  # Code of conduct
+      - file: LICENSE  # License information

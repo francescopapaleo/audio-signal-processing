@@ -9,6 +9,22 @@ title                       : Audio Signal Processing with Python  # The title o
 author                      : Francesco Papaleo  # The author of the book
 copyright                   : "2024"  # Copyright year to be placed in the footer
 logo                        : logo.png  # A path to the book logo
+root                        : .  # The root directory of the book.
+
+# Launch buttons for interactive content
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  colab_url: "https://colab.research.google.com/"
+  binderhub_url: "https://mybinder.org"
+
+# HTML configuration
+html:
+  favicon: ""  # Optional: path to favicon
+  use_repository_button: true
+  use_edit_page_button: true
+  use_issues_button: true
+  extra_footer: |
+    <p>Made with ❤️ using Jupyter Book.</p>
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -26,12 +42,6 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/francescopapaleo/Audio Signal Processing with Python  # Online location of your book
+  url: https://github.com/francescopapaleo/audio-signal-processing  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
-
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  use_issues_button: true
-  use_repository_button: true

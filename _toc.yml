@@ -1,16 +1,19 @@
 format: jb-book
 root: intro
-
+options:
+  numbered: true
+  
 parts:
-  - caption: Signal Processing Basics
+  - caption: Fundamentals of Signal Processing
     chapters:
-      - file: complex_numbers
       - file: discrete_time_signals
+      - file: quantization
+      - file: complex_numbers
       - file: linear_and_non-linear_systems
       - file: convolution
       - file: filters
-      - file: quantization
-
+      - file: linear_algebra_basics
+      
   - caption: Fourier Transform
     chapters:
       - file: fourier_transform
@@ -25,12 +28,20 @@ parts:
           - file: plot_ir_zoom
       - file: loudness
 
+  - caption: Reverberation
+    chapters:
+      - file: reverberation
+
   - caption: Sound and Music Descriptors
     chapters:
       - file: sound_music_descriptors
 
-  - caption: Additional Information
+  # - caption: Additional Information
+  #   chapters:
+  #     - file: CONTRIBUTING  # Contribution guidelines
+  #     - file: CONDUCT  # Code of conduct
+  #     - file: LICENSE  # License information
+
+  - caption: References
     chapters:
-      - file: CONTRIBUTING  # Contribution guidelines
-      - file: CONDUCT  # Code of conduct
-      - file: LICENSE  # License information
+      - file: references

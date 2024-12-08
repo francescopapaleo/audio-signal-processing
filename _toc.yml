@@ -6,35 +6,36 @@ options:
 parts:
   - caption: Fundamentals of Signal Processing
     chapters:
-      - file: discrete_time_signals
-      - file: quantization
-      - file: complex_numbers
-      - file: linear_and_non-linear_systems
-      - file: convolution
-      - file: filters
-      - file: linear_algebra_basics
+      - file: notebooks/sampling
+      - file: notebooks/quantization
+      - file: notebooks/decibels
+      - file: notebooks/complex_numbers
+      - file: notebooks/linear_and_non-linear_systems
+      - file: notebooks/convolution
+      - file: notebooks/filters
+      - file: notebooks/linear_algebra_basics
       
   - caption: Fourier Transform
     chapters:
-      - file: fourier_transform
+      - file: notebooks/fourier_transform
       
   - caption: Audio Analysis and Visualization
     chapters:
-      - file: sweep_tone_analysis
+      - file: notebooks/sweep_tone_analysis
         sections:
-          - file: plot_audio_with_essentia
-          - file: plot_difference
-          - file: plot_ir_waterfall
-          - file: plot_ir_zoom
-      - file: loudness
+          - file: notebooks/plot_audio_with_essentia
+          - file: notebooks/plot_difference
+          - file: notebooks/plot_ir_waterfall
+          - file: notebooks/plot_ir_zoom
+      - file: notebooks/loudness
 
   - caption: Reverberation
     chapters:
-      - file: reverberation
+      - file: notebooks/reverberation
 
   - caption: Sound and Music Descriptors
     chapters:
-      - file: sound_music_descriptors
+      - file: notebooks/sound_music_descriptors
 
   # - caption: Additional Information
   #   chapters:

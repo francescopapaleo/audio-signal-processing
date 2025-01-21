@@ -32,6 +32,7 @@ parts:
   - caption: Reverberation
     chapters:
       - file: notebooks/reverberation
+      - file: notebooks/spring_reverb
 
   - caption: Sound and Music Descriptors
     chapters:

@@ -10,9 +10,9 @@ If you'd like to develop and/or build the Audio Signal Processing with Python bo
 
 1. Clone this repository
 2. Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
-3. (Optional) Edit the books source files located in the `audio_signal_processing_with_python/` directory
-4. Run `jupyter-book clean audio_signal_processing_with_python/` to remove any existing builds
-5. Run `jupyter-book build audio_signal_processing_with_python/`
+3. (Optional) Edit the books source files located in the `audio-signal-processing/` directory
+4. Run `jupyter-book clean audio-signal-processing/` to remove any existing builds
+5. Run `jupyter-book build audio-signal_processing/`
 
 A fully-rendered HTML version of the book will be built in `audio_signal_processing_with_python/_build/html/`.
 

@@ -9,6 +9,7 @@ parts:
       - file: notebooks/sampling
       - file: notebooks/quantization
       - file: notebooks/decibels
+      - file: notebooks/hertz
       - file: notebooks/complex_numbers
       - file: notebooks/linear_and_non-linear_systems
       - file: notebooks/convolution

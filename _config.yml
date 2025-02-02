@@ -25,6 +25,8 @@ html:
   use_issues_button: true
   extra_footer: |
     <p>Made with ❤️ using Jupyter Book.</p>
+  execute:
+    enable_widgets: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

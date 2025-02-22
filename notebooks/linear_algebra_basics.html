@@ -206,10 +206,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
-</ul>
 
     </div>
 </nav></div>
@@ -263,7 +259,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/francescopapaleo/audio-signal-processing/main?urlpath=lab/tree/./notebooks/linear_algebra_basics.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=lab/tree/docs/notebooks/linear_algebra_basics.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -281,7 +277,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/francescopapaleo/audio-signal-processing/blob/main/./notebooks/linear_algebra_basics.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/linear_algebra_basics.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -312,7 +308,7 @@
       
       
       
-      <li><a href="https://github.com/francescopapaleo/audio-signal-processing" target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -329,7 +325,7 @@
       
       
       
-      <li><a href="https://github.com/francescopapaleo/audio-signal-processing/edit/main/./notebooks/linear_algebra_basics.ipynb" target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/edit/master/docs/notebooks/linear_algebra_basics.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +342,7 @@
       
       
       
-      <li><a href="https://github.com/francescopapaleo/audio-signal-processing/issues/new?title=Issue%20on%20page%20%2Fnotebooks/linear_algebra_basics.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/linear_algebra_basics.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -769,17 +765,17 @@ Matrix multiplication:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5 9 2]
- [6 0 1]
- [8 5 8]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[6 8 7]
+ [7 7 6]
+ [9 9 3]]
 
-[[5 6 8]
- [9 0 5]
- [2 1 8]]
+[[6 7 9]
+ [8 7 9]
+ [7 6 3]]
 
-[[5 9 2]
- [6 0 1]
- [8 5 8]]
+[[6 8 7]
+ [7 7 6]
+ [9 9 3]]
 </pre></div>
 </div>
 </div>
@@ -801,20 +797,20 @@ Matrix multiplication:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 2  4  4 14]
- [ 3  8 14  1]
- [11 19  1  0]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 9  8 19  7]
+ [ 0  5  6  2]
+ [10  8 17 17]]
 
-[[ 2  3 11]
- [ 4  8 19]
- [ 4 14  1]
- [14  1  0]]
+[[ 9  0 10]
+ [ 8  5  8]
+ [19  6 17]
+ [ 7  2 17]]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Transposed&#39;)
 </pre></div>
 </div>
-<img alt="../_images/5a58e5ce4d20ea1632b917203222a1bfee56bb0f193a93ecb48dfb44667cf62a.png" src="../_images/5a58e5ce4d20ea1632b917203222a1bfee56bb0f193a93ecb48dfb44667cf62a.png" />
+<img alt="../_images/a957bbc3e19ddea3110dc8a5e218f56a5aa2efe6103c5d82677ef42ddc080a8e.png" src="../_images/a957bbc3e19ddea3110dc8a5e218f56a5aa2efe6103c5d82677ef42ddc080a8e.png" />
 </div>
 </div>
 <p>Matrix multiplication with numpy <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator and <code class="docutils literal notranslate"><span class="pre">np.matmul</span></code>.</p>
@@ -838,15 +834,15 @@ Matrix multiplication:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-6.50981225e+00  4.08906136e-03  3.30390757e-01 -3.50824318e-01]
- [ 6.04345719e-01  1.65112419e+00  1.03671281e-01 -1.09266393e+00]
- [-1.81629825e-01  5.96302535e+00 -3.31807021e+00 -1.55651784e+00]
- [-2.03258708e+00 -4.77388602e-01  4.10437387e-01 -4.05948255e-01]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.94546284  1.22382855 -1.17244216  2.56132885]
+ [-0.98973506 -0.8713244  -3.62126181 -2.66109559]
+ [-2.98974328  1.56581191  1.75047716 -0.42548223]
+ [ 0.06930364  0.14668543  1.18700664 -2.35404269]]
 
-[[-6.50981225e+00  4.08906136e-03  3.30390757e-01 -3.50824318e-01]
- [ 6.04345719e-01  1.65112419e+00  1.03671281e-01 -1.09266393e+00]
- [-1.81629825e-01  5.96302535e+00 -3.31807021e+00 -1.55651784e+00]
- [-2.03258708e+00 -4.77388602e-01  4.10437387e-01 -4.05948255e-01]]
+[[ 0.94546284  1.22382855 -1.17244216  2.56132885]
+ [-0.98973506 -0.8713244  -3.62126181 -2.66109559]
+ [-2.98974328  1.56581191  1.75047716 -0.42548223]
+ [ 0.06930364  0.14668543  1.18700664 -2.35404269]]
 
 [[0. 0. 0. 0.]
  [0. 0. 0. 0.]
@@ -854,7 +850,7 @@ Matrix multiplication:
  [0. 0. 0. 0.]]
 </pre></div>
 </div>
-<img alt="../_images/5414cb5a21a2cda8f9da2c0826345ac0680d4b7c712233c1586e435a909c1180.png" src="../_images/5414cb5a21a2cda8f9da2c0826345ac0680d4b7c712233c1586e435a909c1180.png" />
+<img alt="../_images/2c620333945c991b015582aad01983d7d9c214010ad344a46b724bb288acacbd.png" src="../_images/2c620333945c991b015582aad01983d7d9c214010ad344a46b724bb288acacbd.png" />
 </div>
 </div>
 <p>Matrix multiplication with identity matrix.</p>
@@ -877,13 +873,13 @@ Matrix multiplication:
  [0 1 0]
  [0 0 1]]
 our random int mtx:
-[[3 0 1]
- [5 1 1]
- [1 6 1]]
+[[3 3 0]
+ [8 3 9]
+ [9 0 3]]
 matrix multiplication of I and M5:
-[[3 0 1]
- [5 1 1]
- [1 6 1]]
+[[3 3 0]
+ [8 3 9]
+ [9 0 3]]
 </pre></div>
 </div>
 </div>
@@ -913,15 +909,15 @@ $<span class="math notranslate nohighlight">\(x = A^{-1} b\)</span>$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-2.1845617   0.89834337  0.41532477  0.61995085]
- [-0.54273329  0.83445449  0.56312575 -0.90831302]
- [-1.59457464  0.5881781  -1.30714527  1.11466397]
- [ 0.25688739  0.22094518  0.91166386  0.89173586]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.35334174 -0.79157726  0.10825228 -2.33702306]
+ [ 0.28055329  0.20647459 -1.27838826  0.03765387]
+ [-1.61435181  0.06555    -1.55309288  0.86634508]
+ [-1.91232516 -0.39750198 -2.07674294  1.02325746]]
 
-[[ 1.00000000e+00 -7.92894695e-17  6.06964110e-17 -2.15925590e-17]
- [-6.98420372e-17  1.00000000e+00  2.19294158e-16  2.13540675e-16]
- [-1.51372728e-16  8.90741946e-17  1.00000000e+00  7.88412329e-17]
- [-3.38777338e-17  3.33551109e-17  5.44825532e-17  1.00000000e+00]]
+[[ 1.00000000e+00 -7.56889894e-17  1.14954118e-16 -1.28729628e-16]
+ [ 2.39562254e-16  1.00000000e+00  2.71250655e-16  2.99942364e-16]
+ [-1.06731110e-17 -2.88019439e-18  1.00000000e+00 -5.67988948e-18]
+ [-1.31398662e-16 -7.30597576e-17  1.10919591e-16  1.00000000e+00]]
 </pre></div>
 </div>
 </div>
@@ -940,7 +936,7 @@ $<span class="math notranslate nohighlight">\(x = A^{-1} b\)</span>$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/34db4cac52439f1d2a28fd1efc51abf29d925ef07f5b0f4c3f85dd4315b63057.png" src="../_images/34db4cac52439f1d2a28fd1efc51abf29d925ef07f5b0f4c3f85dd4315b63057.png" />
+<img alt="../_images/2a3484b5195657bf3037e2d39db6dd215976b50897f1856e52da54827a4856ff.png" src="../_images/2a3484b5195657bf3037e2d39db6dd215976b50897f1856e52da54827a4856ff.png" />
 </div>
 </div>
 <p>Create a 3x3 vector, create a diagonal matrix from it</p>

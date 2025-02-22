@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "/Users/fra/.pyenv/versions/3.12.7/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/fra/.pyenv/versions/3.12.7/lib/python3.12/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fra/.pyenv/versions/3.12.7/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fra/.pyenv/versions/3.12.7/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/fra/.pyenv/versions/3.12.7/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/fra/.pyenv/versions/3.12.7/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/fra/.pyenv/versions/3.12.7/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+output = wavfile.read(PREDICTED_AUDIO)[1]
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[3], line 1[0m
+[0;32m----> 1[0m output [38;5;241m=[39m [43mwavfile[49m[38;5;241;43m.[39;49m[43mread[49m[43m([49m[43mPREDICTED_AUDIO[49m[43m)[49m[[38;5;241m1[39m]
+
+File [0;32m~/.pyenv/versions/3.12.7/lib/python3.12/site-packages/scipy/io/wavfile.py:674[0m, in [0;36mread[0;34m(filename, mmap)[0m
+[1;32m    672[0m     mmap [38;5;241m=[39m [38;5;28;01mFalse[39;00m
+[1;32m    673[0m [38;5;28;01melse[39;00m:
+[0;32m--> 674[0m     fid [38;5;241m=[39m [38;5;28;43mopen[39;49m[43m([49m[43mfilename[49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mrb[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m    676[0m [38;5;28;01mtry[39;00m:
+[1;32m    677[0m     file_size, is_big_endian, is_rf64 [38;5;241m=[39m _read_riff_chunk(fid)
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: './audio/pred-gcn-gru-tfilm-41-20231201-132556-48k.wav'
+

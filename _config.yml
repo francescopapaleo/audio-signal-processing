@@ -1,32 +1,17 @@
-#######################################################################################
-# A default configuration that will be loaded for all jupyter books
-# See the documentation for help and more options: 
-# https://jupyterbook.org/customize/config.html
-
-#######################################################################################
 # Book settings
-title                       : Audio Signal Processing with Python  # The title of the book. Will be placed in the left navbar.
-author                      : Francesco Papaleo  # The author of the book
-copyright                   : "2024"  # Copyright year to be placed in the footer
-logo                        : logo.png  # A path to the book logo
-root                        : .  # The root directory of the book.
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Audio Signal Processing with Python  # The title of the book. Will be placed in the left navbar.
+author: Francesco Papaleo  # The author of the book
+copyright: "2024"  # Copyright year to be placed in the footer
+logo: logo.png  # A path to the book logo
 
 # Launch buttons for interactive content
 launch_buttons:
   notebook_interface: "jupyterlab"
   colab_url: "https://colab.research.google.com/"
   binderhub_url: "https://mybinder.org"
-
-# HTML configuration
-html:
-  favicon: ""  # Optional: path to favicon
-  use_repository_button: true
-  use_edit_page_button: true
-  use_issues_button: true
-  extra_footer: |
-    <p>Made with ❤️ using Jupyter Book.</p>
-  execute:
-    enable_widgets: true
+  thebe: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -39,15 +24,27 @@ latex:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles: 
-    - references_bibtex.bib
+bibtex_bibfiles:
+  - references.bib
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/francescopapaleo/audio-signal-processing  # Online location of your book
-  path_to_book: .  # Optional path to your book, relative to the repository root
-  branch: main  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/francescopapaleo/audio-signal-processing
+  branch: main
+  provider: github
 
-exclude_patterns: ["**/.ipynb_checkpoints", "**/Thumbs.db", "**/.DS_Store", ".jupyter_cache", ".github", "README.md", "LICENSE"]
+  # path_to_book: docs  # Optional path to your book, relative to the repository root
+  # branch: main  # Which branch of the repository should be used when creating links (optional)
 
-only_build_toc_files: true
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+# HTML configuration
+html:
+  favicon: ""  # Optional: path to favicon
+  use_repository_button: true
+  use_edit_page_button: true
+  use_issues_button: true
+  extra_footer: |
+    <p>Made with ❤️ using Jupyter Book.</p>
+  execute:
+    enable_widgets: true

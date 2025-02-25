@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -65,7 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/decibels';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Hertz" href="hertz.html" />
+    <link rel="next" title="Complex Numbers" href="complex_numbers.html" />
     <link rel="prev" title="Quantization" href="quantization.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -170,42 +170,52 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals of Signal Processing</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals of Audio Signal Processing</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sound_waves.html">Sound Waves</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quantization.html">Quantization</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Decibels (dB)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hertz.html">Hertz</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="complex_numbers.html">Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_algebra_basics.html">Linear Algebra Basics with Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linear_and_non-linear_systems.html">Linear &amp; Non-Linear Systems in Discrete Time (DT)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Time and Frequency Domain Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="waveforms.html">Waveforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time_domain_analysis.html">Time Domain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fourier_transform.html">Fourier Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="convolution.html">Convolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_algebra_basics.html">Linear Algebra Basics with Numpy</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fourier Transform</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Measuring and Analyzing Audio Signals</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="fourier_transform.html">Fourier Transform</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Audio Analysis and Visualization</span></p>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="normalization_dc_rms.html">Normalization</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="loudness.html">Loudness according to: ITU-R BS.1770-2</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="sweep_tone_analysis.html">Sweep Tone Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_audio_with_essentia.html">Plot Audio Files Waveforms and Spectrograms with Essentia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_difference.html">Plot Difference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Room Acoustics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reverberation.html">Reverberation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="impulse_response.html">Impulse Response</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_ir_waterfall.html">Impulse Response (IR): Plotting Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_ir_zoom.html">Plot Impulse Response (IR) with zoom</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="loudness.html">Loudness according to: ITU-R BS.1770-2</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reverberation</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="reverberation.html">Reverberation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convolution_reverb.html">Convolution Reverb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback_delay_network.html">Feedback Delay Network (FDN) Reverb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spring_reverb.html">Analysis and Synthesis of Spring Reverb</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sound and Music Descriptors</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
     </div>
@@ -497,7 +507,7 @@ The decibel is defined as ten times the logarithm to the base 10 of the ratio of
 \[ 
 \text{dB} = 10 \cdot \log_{10}\left(\frac{P_1}{P_2}\right) 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( P_1 \)</span> and <span class="math notranslate nohighlight">\( P_2 \)</span> are the relative powers of the sound <span id="id1">[<a class="reference internal" href="../markdown.html#id4" title="Wikipedia contributors. Decibel — Wikipedia, the free encyclopedia. 2024. [Online; accessed 7-December-2024]. URL: https://en.wikipedia.org/w/index.php?title=Decibel&amp;oldid=1260411874.">Wikipediacontributors24</a>]</span></p>
+<p>where <span class="math notranslate nohighlight">\( P_1 \)</span> and <span class="math notranslate nohighlight">\( P_2 \)</span> are the relative powers of the sound <span id="id1">[<a class="reference internal" href="../references.html#id3" title="Wikipedia contributors. Decibel — Wikipedia, the free encyclopedia. 2024. [Online; accessed 7-December-2024]. URL: https://en.wikipedia.org/w/index.php?title=Decibel&amp;oldid=1260411874.">Wikipediacontributors24</a>]</span></p>
 <section id="convert-magnitude-to-decibels">
 <h2>Convert Magnitude to Decibels<a class="headerlink" href="#convert-magnitude-to-decibels" title="Link to this heading">#</a></h2>
 <p><strong>Magnitude</strong> represents the amplitude of a signal directly. As an example, a value of 1 corresponds to “unity gain” (no amplification or attenuation) and corresponds to 0 dB (reference level). Magnitudes smaller than 1 result in negative dB values (attenuation), while magnitudes greater than 1 produce positive dB values (amplification).
@@ -597,11 +607,11 @@ At larger magnitudes, the curve flattens, indicating a more gradual change in dB
       </div>
     </a>
     <a class="right-next"
-       href="hertz.html"
+       href="complex_numbers.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Hertz</p>
+        <p class="prev-next-title">Complex Numbers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

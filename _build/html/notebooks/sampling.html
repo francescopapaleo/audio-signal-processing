@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -66,7 +66,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Quantization" href="quantization.html" />
-    <link rel="prev" title="Audio Signal Processing Concepts Explained with Python" href="../intro.html" />
+    <link rel="prev" title="Sound Waves" href="sound_waves.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -170,41 +170,52 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals of Signal Processing</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals of Audio Signal Processing</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sound_waves.html">Sound Waves</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quantization.html">Quantization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decibels.html">Decibels (dB)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hertz.html">Hertz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="complex_numbers.html">Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_algebra_basics.html">Linear Algebra Basics with Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linear_and_non-linear_systems.html">Linear &amp; Non-Linear Systems in Discrete Time (DT)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Time and Frequency Domain Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="waveforms.html">Waveforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time_domain_analysis.html">Time Domain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fourier_transform.html">Fourier Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="convolution.html">Convolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_algebra_basics.html">Linear Algebra Basics with Numpy</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fourier Transform</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Measuring and Analyzing Audio Signals</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="fourier_transform.html">Fourier Transform</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Audio Analysis and Visualization</span></p>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="normalization_dc_rms.html">Normalization</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="loudness.html">Loudness according to: ITU-R BS.1770-2</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="sweep_tone_analysis.html">Sweep Tone Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_audio_with_essentia.html">Plot Audio Files Waveforms and Spectrograms with Essentia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_difference.html">Plot Difference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Room Acoustics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reverberation.html">Reverberation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="impulse_response.html">Impulse Response</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_ir_waterfall.html">Impulse Response (IR): Plotting Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_ir_zoom.html">Plot Impulse Response (IR) with zoom</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="loudness.html">Loudness according to: ITU-R BS.1770-2</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reverberation</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="reverberation.html">Reverberation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convolution_reverb.html">Convolution Reverb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback_delay_network.html">Feedback Delay Network (FDN) Reverb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spring_reverb.html">Analysis and Synthesis of Spring Reverb</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sound and Music Descriptors</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
     </div>
@@ -478,7 +489,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-time-ct-signals">Continuous Time (CT) Signals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-time-signals">Discrete Time Signals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sine-and-cosine-waves">Sine and Cosine Waves</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aliasing">Aliasing</a></li>
 </ul>
             </nav>
         </div>
@@ -500,6 +511,7 @@
 <span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">patches</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-v0_8-whitegrid&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.grid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </div>
@@ -513,15 +525,16 @@ x(t) = A \cos(\omega_0 t + \phi)
 <p>Where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(x(t)\)</span> represents the signal amplitude at a specific time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(A\)</span> is the amplitude of the signal, which determines its peak heigth.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\omega_0\)</span> is the angular frequency in radians per second. It determines how fast the signal oscillates. <span class="math notranslate nohighlight">\(\omega_0 = 2 \pi f \)</span>, where <span class="math notranslate nohighlight">\(f\)</span> is the frequency in Hertz (cycles per second).</p></li>
-<li><p><span class="math notranslate nohighlight">\(\phi\)</span> is the phase-shift of the signal. It determines the position of the signal relative to time <span class="math notranslate nohighlight">\(t=0\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(t\)</span> is the continuous time variable.</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> is the <strong>amplitude</strong> of the signal, which determines its peak heigth.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega_0\)</span> is the <strong>angular frequency</strong> in radians per second, it determines how fast the signal oscillates.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi\)</span> is the <strong>phase-shift</strong> of the signal: its position relative to time <span class="math notranslate nohighlight">\(t=0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span> is the <strong>continuous time</strong> variable.</p></li>
 </ul>
-<p>Frequency (<span class="math notranslate nohighlight">\(f\)</span>) is a crucial parameter. It tells us how many cycles of the waveform occur in one second. It’s the inverse of the period (<span class="math notranslate nohighlight">\(T\)</span>), where <span class="math notranslate nohighlight">\(T\)</span> is the time taken for one complete cycle. The relationship between frequency and period is given by:
+<p>The angular frequency can be expressed as:
 $<span class="math notranslate nohighlight">\(
-f = \frac{1}{T} \quad \text{and} \quad T = \frac{1}{f}
+\omega_0 = 2 \pi f
 \)</span>$</p>
+<p>where <span class="math notranslate nohighlight">\(f\)</span> is the frequency in Hertz (cycles per second).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a signal with amplitude, frequency, phase, and sample rate</span>
@@ -533,11 +546,18 @@ f = \frac{1}{T} \quad \text{and} \quad T = \frac{1}{f}
 <span class="c1"># Define a time vector</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">fs</span><span class="p">)</span>
 
+<span class="c1"># Generate the signal</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f0</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>In digital signal processing, continuous-time signals (such as sound waves in the air) must be converted into discrete-time signals that can be processed by a computer. This process is called sampling, where we measure the amplitude of a signal at discrete time intervals.</p>
+<p>The plot below illustrates this concept using a 1 Hz cosine signal:</p>
+<ul class="simple">
+<li><p>The top plot represents the continuous-time signal, which exists in the analog domain as <span class="math notranslate nohighlight">\(x(t)\)</span>.</p></li>
+<li><p>The bottom plot shows its sampled version, where the signal is represented only at discrete points in time, denoted as <span class="math notranslate nohighlight">\(x[n]\)</span>.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -593,76 +613,68 @@ x[n] = A \cos\left(\frac{2\pi}{N} n + \phi\right)
 <li><p><span class="math notranslate nohighlight">\(f_s\)</span> is the sampling frequency in Hertz (samples per second).</p></li>
 <li><p><span class="math notranslate nohighlight">\(N\)</span> is the number of samples per period.</p></li>
 </ul>
-<p>in the digital domain, we represent continuous analog signals by discretizing them into individual samples, and the digital angular frequency is related to the analog frequency and the number of samples per period. This allows us to work with signals in a digital, quantized form for processing and analysis.</p>
+<p>This means that in digital signal processing, we represent continuous analog signals by discretizing them into individual samples. The digital angular frequency is directly related to the analog frequency and the number of samples per period. This discretization enables us to process and analyze signals using computational techniques.</p>
+<p>The figure below visually demonstrates this concept. The blue curve represents the original continuous 1 Hz cosine wave, while the red markers show the sampled points at a sampling rate of 16 Hz. This superposition helps illustrate how a continuous waveform is represented in discrete time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;original&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">linefmt</span><span class="o">=</span><span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">markerfmt</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">basefmt</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;12Hz sample rate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">linefmt</span><span class="o">=</span><span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">markerfmt</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">basefmt</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fs</span><span class="si">}</span><span class="s1">Hz sample rate&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;1Hz Cosine Wave Sampled at </span><span class="si">{</span><span class="n">fs</span><span class="si">}</span><span class="s1">Hz - Superposition of the two&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/4b90c54794468d2f6f968d10093d73147f598c30e7c8ac2822c50c0a34fb1a83.png" src="../_images/4b90c54794468d2f6f968d10093d73147f598c30e7c8ac2822c50c0a34fb1a83.png" />
-</div>
-</div>
-</section>
-<section id="sine-and-cosine-waves">
-<h2>Sine and Cosine Waves<a class="headerlink" href="#sine-and-cosine-waves" title="Link to this heading">#</a></h2>
-<p>Mathematically, a sinusoidal signal in continuous-time can be represented as:
-$<span class="math notranslate nohighlight">\(
-x(t) = A \sin(\omega_0 t + \phi)
-\)</span>$</p>
-<p>While in the digital domain, we express the frequency of the signal with the
-$<span class="math notranslate nohighlight">\(
-x[n] = A \sin\left(\frac{2\pi}{N}n + \phi\right)
-\)</span>$</p>
-<p>In Python, we can generate a sinusoidal signal using the <code class="docutils literal notranslate"><span class="pre">np.sin()</span></code> function from the NumPy library.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f0</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">)</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">sin</span></code> represents a cosine wave, and sin represents a sine wave.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">A</span></code> is the amplitude of the waves.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">f0</span></code> is the frequency of the waves in Hertz.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> is the time axis.</p></li>
-</ul>
-<p>Simply by replacing <code class="docutils literal notranslate"><span class="pre">np.sin()</span></code> with <code class="docutils literal notranslate"><span class="pre">np.cos()</span></code>, we can generate a cosine wave.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f0</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f0</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">)</span>
-<span class="n">sin</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f0</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">)</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;cos&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sin&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;phase shift ($</span><span class="se">\\</span><span class="s1">phi$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">arrow_style</span> <span class="o">=</span> <span class="n">patches</span><span class="o">.</span><span class="n">FancyArrowPatch</span><span class="p">((</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.72</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.72</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">mutation_scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;&lt;-&gt;&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">arrow_style</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Cosine and Sine Waves&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/145b3294fc68098777a6464024775fc248c0452b2259dcf0f6391dcd39a5c8fa.png" src="../_images/145b3294fc68098777a6464024775fc248c0452b2259dcf0f6391dcd39a5c8fa.png" />
+<img alt="../_images/f702a2ad224da8c9234e94323459f3e5d300241a6df7b59b3c483277fb2d61a7.png" src="../_images/f702a2ad224da8c9234e94323459f3e5d300241a6df7b59b3c483277fb2d61a7.png" />
+</div>
+</div>
+</section>
+<section id="aliasing">
+<h2>Aliasing<a class="headerlink" href="#aliasing" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define signal parameters</span>
+<span class="n">f_signal</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Frequency of the original signal (Hz)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Duration (seconds)</span>
+<span class="n">fs_high</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># High sampling rate for the continuous-like signal</span>
+<span class="n">fs_low</span> <span class="o">=</span> <span class="mi">18</span>    <span class="c1"># Insufficient sampling rate (below Nyquist)</span>
+
+<span class="c1"># Time vectors for high and low sampling rates</span>
+<span class="n">t_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">fs_high</span><span class="p">)</span>  <span class="c1"># High-resolution time</span>
+<span class="n">t_low</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">fs_low</span><span class="p">)</span>    <span class="c1"># Low-resolution time</span>
+
+<span class="c1"># Generate the original continuous signal</span>
+<span class="n">x_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f_signal</span> <span class="o">*</span> <span class="n">t_high</span><span class="p">)</span>
+
+<span class="c1"># Sample the signal at the lower sampling rate</span>
+<span class="n">x_low</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f_signal</span> <span class="o">*</span> <span class="n">t_low</span><span class="p">)</span>
+
+<span class="c1"># Plot results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Plot high-resolution signal</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_high</span><span class="p">,</span> <span class="n">x_high</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Original Signal (High Sampling Rate)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot low-sampled version</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">t_low</span><span class="p">,</span> <span class="n">x_low</span><span class="p">,</span> <span class="n">linefmt</span><span class="o">=</span><span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">markerfmt</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">basefmt</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sampled Signal (Aliased)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_low</span><span class="p">,</span> <span class="n">x_low</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Aliasing: </span><span class="si">{</span><span class="n">f_signal</span><span class="si">}</span><span class="s2"> Hz Signal Sampled at </span><span class="si">{</span><span class="n">fs_low</span><span class="si">}</span><span class="s2"> Hz&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower center&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.15</span><span class="p">),</span> <span class="n">ncol</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b53b64d29f81ccdea9f8adf13318df69f0fa2c8f7a5acb86f4e68b1db11c206e.png" src="../_images/b53b64d29f81ccdea9f8adf13318df69f0fa2c8f7a5acb86f4e68b1db11c206e.png" />
 </div>
 </div>
 </section>
@@ -699,12 +711,12 @@ x[n] = A \sin\left(\frac{2\pi}{N}n + \phi\right)
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../intro.html"
+       href="sound_waves.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Audio Signal Processing Concepts Explained with Python</p>
+        <p class="prev-next-title">Sound Waves</p>
       </div>
     </a>
     <a class="right-next"
@@ -735,7 +747,7 @@ x[n] = A \sin\left(\frac{2\pi}{N}n + \phi\right)
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-time-ct-signals">Continuous Time (CT) Signals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-time-signals">Discrete Time Signals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sine-and-cosine-waves">Sine and Cosine Waves</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aliasing">Aliasing</a></li>
 </ul>
   </nav></div>
 

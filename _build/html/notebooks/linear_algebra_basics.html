@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -65,8 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/linear_algebra_basics';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Fourier Transform" href="fourier_transform.html" />
-    <link rel="prev" title="Filters" href="filters.html" />
+    <link rel="next" title="Linear &amp; Non-Linear Systems in Discrete Time (DT)" href="linear_and_non-linear_systems.html" />
+    <link rel="prev" title="Complex Numbers" href="complex_numbers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -170,42 +170,52 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals of Signal Processing</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals of Audio Signal Processing</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sound_waves.html">Sound Waves</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quantization.html">Quantization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decibels.html">Decibels (dB)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hertz.html">Hertz</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="complex_numbers.html">Complex Numbers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Linear Algebra Basics with Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linear_and_non-linear_systems.html">Linear &amp; Non-Linear Systems in Discrete Time (DT)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Time and Frequency Domain Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="waveforms.html">Waveforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time_domain_analysis.html">Time Domain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fourier_transform.html">Fourier Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="convolution.html">Convolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Linear Algebra Basics with Numpy</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fourier Transform</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Measuring and Analyzing Audio Signals</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="fourier_transform.html">Fourier Transform</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Audio Analysis and Visualization</span></p>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="normalization_dc_rms.html">Normalization</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="loudness.html">Loudness according to: ITU-R BS.1770-2</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="sweep_tone_analysis.html">Sweep Tone Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_audio_with_essentia.html">Plot Audio Files Waveforms and Spectrograms with Essentia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_difference.html">Plot Difference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Room Acoustics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reverberation.html">Reverberation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="impulse_response.html">Impulse Response</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_ir_waterfall.html">Impulse Response (IR): Plotting Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_ir_zoom.html">Plot Impulse Response (IR) with zoom</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="loudness.html">Loudness according to: ITU-R BS.1770-2</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reverberation</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="reverberation.html">Reverberation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convolution_reverb.html">Convolution Reverb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback_delay_network.html">Feedback Delay Network (FDN) Reverb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spring_reverb.html">Analysis and Synthesis of Spring Reverb</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sound and Music Descriptors</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
     </div>
@@ -784,17 +794,17 @@ Matrix multiplication:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[6 8 7]
- [7 7 6]
- [9 9 3]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[8 3 3]
+ [8 3 9]
+ [4 7 8]]
 
-[[6 7 9]
- [8 7 9]
- [7 6 3]]
+[[8 8 4]
+ [3 3 7]
+ [3 9 8]]
 
-[[6 8 7]
- [7 7 6]
- [9 9 3]]
+[[8 3 3]
+ [8 3 9]
+ [4 7 8]]
 </pre></div>
 </div>
 </div>
@@ -816,20 +826,20 @@ Matrix multiplication:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 9  8 19  7]
- [ 0  5  6  2]
- [10  8 17 17]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 5  4  0  1]
+ [ 8 11 15  8]
+ [ 0 15 16 13]]
 
-[[ 9  0 10]
- [ 8  5  8]
- [19  6 17]
- [ 7  2 17]]
+[[ 5  8  0]
+ [ 4 11 15]
+ [ 0 15 16]
+ [ 1  8 13]]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Transposed&#39;)
 </pre></div>
 </div>
-<img alt="../_images/a957bbc3e19ddea3110dc8a5e218f56a5aa2efe6103c5d82677ef42ddc080a8e.png" src="../_images/a957bbc3e19ddea3110dc8a5e218f56a5aa2efe6103c5d82677ef42ddc080a8e.png" />
+<img alt="../_images/34a7ac6379a4d43fee19f6c1752bd1dde064531ae212722ad81822ebfd322c01.png" src="../_images/34a7ac6379a4d43fee19f6c1752bd1dde064531ae212722ad81822ebfd322c01.png" />
 </div>
 </div>
 <p>Matrix multiplication with numpy <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator and <code class="docutils literal notranslate"><span class="pre">np.matmul</span></code>.</p>
@@ -853,15 +863,15 @@ Matrix multiplication:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.94546284  1.22382855 -1.17244216  2.56132885]
- [-0.98973506 -0.8713244  -3.62126181 -2.66109559]
- [-2.98974328  1.56581191  1.75047716 -0.42548223]
- [ 0.06930364  0.14668543  1.18700664 -2.35404269]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-2.77213968 -3.31505893  3.39514473 -0.24963729]
+ [ 0.53655312  3.45739659 -3.71800732  1.00455891]
+ [-4.11876079 -1.22408463  0.50552431  0.12062561]
+ [-0.64320033 -2.81546003 -0.1095179  -0.76953261]]
 
-[[ 0.94546284  1.22382855 -1.17244216  2.56132885]
- [-0.98973506 -0.8713244  -3.62126181 -2.66109559]
- [-2.98974328  1.56581191  1.75047716 -0.42548223]
- [ 0.06930364  0.14668543  1.18700664 -2.35404269]]
+[[-2.77213968 -3.31505893  3.39514473 -0.24963729]
+ [ 0.53655312  3.45739659 -3.71800732  1.00455891]
+ [-4.11876079 -1.22408463  0.50552431  0.12062561]
+ [-0.64320033 -2.81546003 -0.1095179  -0.76953261]]
 
 [[0. 0. 0. 0.]
  [0. 0. 0. 0.]
@@ -869,7 +879,7 @@ Matrix multiplication:
  [0. 0. 0. 0.]]
 </pre></div>
 </div>
-<img alt="../_images/2c620333945c991b015582aad01983d7d9c214010ad344a46b724bb288acacbd.png" src="../_images/2c620333945c991b015582aad01983d7d9c214010ad344a46b724bb288acacbd.png" />
+<img alt="../_images/9a2d357f9a4b3a974cd204a29d3286c15046899a61dfe903d9127ad45a9a6edd.png" src="../_images/9a2d357f9a4b3a974cd204a29d3286c15046899a61dfe903d9127ad45a9a6edd.png" />
 </div>
 </div>
 <p>Matrix multiplication with identity matrix.</p>
@@ -892,13 +902,13 @@ Matrix multiplication:
  [0 1 0]
  [0 0 1]]
 our random int mtx:
-[[3 3 0]
- [8 3 9]
- [9 0 3]]
+[[3 4 4]
+ [3 9 4]
+ [7 4 1]]
 matrix multiplication of I and M5:
-[[3 3 0]
- [8 3 9]
- [9 0 3]]
+[[3 4 4]
+ [3 9 4]
+ [7 4 1]]
 </pre></div>
 </div>
 </div>
@@ -928,15 +938,15 @@ $<span class="math notranslate nohighlight">\(x = A^{-1} b\)</span>$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.35334174 -0.79157726  0.10825228 -2.33702306]
- [ 0.28055329  0.20647459 -1.27838826  0.03765387]
- [-1.61435181  0.06555    -1.55309288  0.86634508]
- [-1.91232516 -0.39750198 -2.07674294  1.02325746]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.81087278  0.55040609  0.74735796  0.50619103]
+ [-0.33692023  0.44964966 -1.78004022 -0.50923834]
+ [ 0.49634031 -1.05254756 -0.3418569   0.49158158]
+ [-0.24517237 -0.3531174   0.13941232 -1.35816709]]
 
-[[ 1.00000000e+00 -7.56889894e-17  1.14954118e-16 -1.28729628e-16]
- [ 2.39562254e-16  1.00000000e+00  2.71250655e-16  2.99942364e-16]
- [-1.06731110e-17 -2.88019439e-18  1.00000000e+00 -5.67988948e-18]
- [-1.31398662e-16 -7.30597576e-17  1.10919591e-16  1.00000000e+00]]
+[[ 1.00000000e+00  2.45639755e-16  2.35166950e-16  1.63215379e-16]
+ [-5.99842134e-17  1.00000000e+00  7.95525759e-17 -1.62049330e-17]
+ [ 1.07134726e-18 -2.98002161e-17  1.00000000e+00  1.32208233e-17]
+ [-2.85427007e-18 -1.04237671e-17 -1.47229717e-17  1.00000000e+00]]
 </pre></div>
 </div>
 </div>
@@ -955,7 +965,7 @@ $<span class="math notranslate nohighlight">\(x = A^{-1} b\)</span>$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2a3484b5195657bf3037e2d39db6dd215976b50897f1856e52da54827a4856ff.png" src="../_images/2a3484b5195657bf3037e2d39db6dd215976b50897f1856e52da54827a4856ff.png" />
+<img alt="../_images/d9a3fbb3218c5a8363a1c7207baaa7135b3dd6417c1be56fb7e77c593c3d4411.png" src="../_images/d9a3fbb3218c5a8363a1c7207baaa7135b3dd6417c1be56fb7e77c593c3d4411.png" />
 </div>
 </div>
 <p>Create a 3x3 vector, create a diagonal matrix from it</p>
@@ -1168,20 +1178,20 @@ Matrix multiplication:
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="filters.html"
+       href="complex_numbers.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Filters</p>
+        <p class="prev-next-title">Complex Numbers</p>
       </div>
     </a>
     <a class="right-next"
-       href="fourier_transform.html"
+       href="linear_and_non-linear_systems.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fourier Transform</p>
+        <p class="prev-next-title">Linear &amp; Non-Linear Systems in Discrete Time (DT)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/reverberation';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Analysis and Synthesis of Spring Reverb" href="spring_reverb.html" />
-    <link rel="prev" title="Loudness according to: ITU-R BS.1770-2" href="loudness.html" />
+    <link rel="next" title="Impulse Response" href="impulse_response.html" />
+    <link rel="prev" title="Sound and Music Descriptors" href="sound_music_descriptors.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -168,41 +168,52 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals of Signal Processing</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals of Audio Signal Processing</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sound_waves.html">Sound Waves</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quantization.html">Quantization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decibels.html">Decibels (dB)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hertz.html">Hertz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="complex_numbers.html">Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_algebra_basics.html">Linear Algebra Basics with Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linear_and_non-linear_systems.html">Linear &amp; Non-Linear Systems in Discrete Time (DT)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Time and Frequency Domain Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="waveforms.html">Waveforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time_domain_analysis.html">Time Domain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fourier_transform.html">Fourier Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="convolution.html">Convolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_algebra_basics.html">Linear Algebra Basics with Numpy</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fourier Transform</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Measuring and Analyzing Audio Signals</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="fourier_transform.html">Fourier Transform</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Audio Analysis and Visualization</span></p>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="normalization_dc_rms.html">Normalization</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="loudness.html">Loudness according to: ITU-R BS.1770-2</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="sweep_tone_analysis.html">Sweep Tone Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_audio_with_essentia.html">Plot Audio Files Waveforms and Spectrograms with Essentia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_difference.html">Plot Difference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Room Acoustics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Reverberation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="impulse_response.html">Impulse Response</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_ir_waterfall.html">Impulse Response (IR): Plotting Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_ir_zoom.html">Plot Impulse Response (IR) with zoom</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="loudness.html">Loudness according to: ITU-R BS.1770-2</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reverberation</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Reverberation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convolution_reverb.html">Convolution Reverb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback_delay_network.html">Feedback Delay Network (FDN) Reverb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spring_reverb.html">Analysis and Synthesis of Spring Reverb</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sound and Music Descriptors</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
     </div>
@@ -257,7 +268,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=lab/tree/docs/notebooks/reverberation.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/francescopapaleo/audio-signal-processing/main?urlpath=lab/tree/notebooks/reverberation.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +286,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/reverberation.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/francescopapaleo/audio-signal-processing/blob/main/notebooks/reverberation.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,6 +299,24 @@
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
 </li>
       
   </ul>
@@ -306,7 +335,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/francescopapaleo/audio-signal-processing" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -323,7 +352,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/edit/master/docs/notebooks/reverberation.ipynb" target="_blank"
+      <li><a href="https://github.com/francescopapaleo/audio-signal-processing/edit/main/notebooks/reverberation.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -340,7 +369,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/reverberation.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/francescopapaleo/audio-signal-processing/issues/new?title=Issue%20on%20page%20%2Fnotebooks/reverberation.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -479,6 +508,7 @@
 <span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">wavfile</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-v0_8-whitegrid&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.grid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="n">db_to_mag</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">20</span><span class="p">)</span>
@@ -504,58 +534,11 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define exact transition points in milliseconds</span>
-<span class="n">direct_end</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">early_reflections_end</span> <span class="o">=</span> <span class="mi">40</span>
-<span class="n">cluster_end</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">late_reverb_start</span> <span class="o">=</span> <span class="mi">100</span>
-
-<span class="c1"># Define regions for coloring</span>
-<span class="n">direct_region</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&lt;=</span> <span class="n">direct_end</span><span class="p">)</span>
-<span class="n">early_reflections_region</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&gt;</span> <span class="n">direct_end</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&lt;=</span> <span class="n">early_reflections_end</span><span class="p">)</span>
-<span class="n">cluster_region</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&gt;</span> <span class="n">early_reflections_end</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&lt;=</span> <span class="n">cluster_end</span><span class="p">)</span>
-<span class="n">late_reverb_region</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&gt;</span> <span class="n">late_reverb_start</span><span class="p">)</span>
-
-<span class="c1"># Use a colormap with distinct points</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;RdYlBu&quot;</span><span class="p">)</span>  <span class="c1"># Choose a colormap (e.g., &quot;viridis&quot;, &quot;plasma&quot;, &quot;inferno&quot;)</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.1</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mf">0.4</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mf">0.7</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)]</span>  <span class="c1"># Select spaced points along the colormap</span>
-
-<span class="c1"># Plotting the waveform</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-
-<span class="c1"># Fill regions with distinct colors</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
-    <span class="n">time_array</span><span class="p">,</span> <span class="n">rir</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">direct_region</span><span class="p">,</span> 
-    <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Direct Signal&quot;</span>
-<span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
-    <span class="n">time_array</span><span class="p">,</span> <span class="n">rir</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">early_reflections_region</span><span class="p">,</span> 
-    <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Early Reflections&quot;</span>
-<span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
-    <span class="n">time_array</span><span class="p">,</span> <span class="n">rir</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">cluster_region</span><span class="p">,</span> 
-    <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Cluster&quot;</span>
-<span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
-    <span class="n">time_array</span><span class="p">,</span> <span class="n">rir</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">late_reverb_region</span><span class="p">,</span> 
-    <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Late Reverberation&quot;</span>
-<span class="p">)</span>
-
-<span class="c1"># General plot settings</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (ms)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Temporal Structure (Continuous Time)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define colormap and colors</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;RdYlBu&quot;</span><span class="p">)</span> 
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.1</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mf">0.4</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mf">0.8</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)]</span>  <span class="c1"># Select spaced points along the colormap</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/f94e9e4ef36d1313792d643849dc90df98bdbcd31087ef9470fdd2ee647963be.png" src="../_images/f94e9e4ef36d1313792d643849dc90df98bdbcd31087ef9470fdd2ee647963be.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -572,9 +555,58 @@
 <span class="n">cluster_region</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&gt;</span> <span class="n">early_reflections_end</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&lt;=</span> <span class="n">cluster_end</span><span class="p">)</span>
 <span class="n">late_reverb_region</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&gt;</span> <span class="n">late_reverb_start</span><span class="p">)</span>
 
-<span class="c1"># Use a colormap with distinct points</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;RdYlBu&quot;</span><span class="p">)</span>  <span class="c1"># Use the &quot;RdYlBu&quot; colormap</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.1</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mf">0.4</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mf">0.7</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)]</span>  <span class="c1"># Select spaced points along the colormap</span>
+
+<span class="c1"># Plotting the waveform</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># Fill regions with distinct colors</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">time_array</span><span class="p">,</span> <span class="n">rir</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">direct_region</span><span class="p">,</span> 
+    <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Direct Signal&quot;</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">time_array</span><span class="p">,</span> <span class="n">rir</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">early_reflections_region</span><span class="p">,</span> 
+    <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Early Reflections&quot;</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">time_array</span><span class="p">,</span> <span class="n">rir</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">cluster_region</span><span class="p">,</span> 
+    <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Cluster&quot;</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">time_array</span><span class="p">,</span> <span class="n">rir</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">late_reverb_region</span><span class="p">,</span> 
+    <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Late Reverberation&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># General plot settings</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (ms)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Temporal Structure (Continuous Time)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="c1"># plt.grid(alpha=0.3)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e63a6edd689a6c84631d42c80dd2218ca3e9023adc4e62beb07058b50e8e9868.png" src="../_images/e63a6edd689a6c84631d42c80dd2218ca3e9023adc4e62beb07058b50e8e9868.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define exact transition points in milliseconds</span>
+<span class="n">direct_end</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">early_reflections_end</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">cluster_end</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">late_reverb_start</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Define regions for coloring</span>
+<span class="n">direct_region</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&lt;=</span> <span class="n">direct_end</span><span class="p">)</span>
+<span class="n">early_reflections_region</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&gt;</span> <span class="n">direct_end</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&lt;=</span> <span class="n">early_reflections_end</span><span class="p">)</span>
+<span class="n">cluster_region</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&gt;</span> <span class="n">early_reflections_end</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&lt;=</span> <span class="n">cluster_end</span><span class="p">)</span>
+<span class="n">late_reverb_region</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_array</span> <span class="o">&gt;</span> <span class="n">late_reverb_start</span><span class="p">)</span>
 
 <span class="c1"># Plotting the discrete version</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -627,13 +659,13 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Temporal Structure (Discrete Time)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="c1"># plt.grid(alpha=0.3)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5ad0f12d211cb7df9c064b096f7445d1e62d40d8575fc2722385af5e581a2a6d.png" src="../_images/5ad0f12d211cb7df9c064b096f7445d1e62d40d8575fc2722385af5e581a2a6d.png" />
+<img alt="../_images/6e4c4e37c5c2a078b063202de4eaea34219c47fd7517274f15cf6f868f15a864.png" src="../_images/6e4c4e37c5c2a078b063202de4eaea34219c47fd7517274f15cf6f868f15a864.png" />
 </div>
 </div>
 </section>
@@ -738,7 +770,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define colormap and colors</span>
 <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;RdYlBu&quot;</span><span class="p">)</span> 
-<span class="n">num_colors</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">num_colors</span> <span class="o">=</span> <span class="mi">3</span>
 
 <span class="c1"># select points in the colormap and add them to a list</span>
 <span class="n">points_colors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_colors</span><span class="p">)</span>
@@ -772,9 +804,9 @@
 <span class="c1"># Plot</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">low_decay</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Low Frequencies&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">mid_decay</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Mid Frequencies&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">hi_decay</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;High Frequencies&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">low_decay</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Low Frequencies&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">mid_decay</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Mid Frequencies&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">hi_decay</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;High Frequencies&quot;</span><span class="p">)</span>
 
 <span class="c1"># Plot settings</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Decay of the Frequency Bands&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
@@ -783,14 +815,13 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">RT_0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2b2e162d59cfd16e9cdd0b90195d068d9647edf436d32f824b9ce7929112e535.png" src="../_images/2b2e162d59cfd16e9cdd0b90195d068d9647edf436d32f824b9ce7929112e535.png" />
+<img alt="../_images/ddddc9c9ae20513b4b8a9827c5c61f7f03d58fd4373824b9caf2a8824f24ce35.png" src="../_images/ddddc9c9ae20513b4b8a9827c5c61f7f03d58fd4373824b9caf2a8824f24ce35.png" />
 </div>
 </div>
 </section>
@@ -800,8 +831,8 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "francescopapaleo/audio-signal-processing",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -827,20 +858,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="loudness.html"
+       href="sound_music_descriptors.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Loudness according to: ITU-R BS.1770-2</p>
+        <p class="prev-next-title">Sound and Music Descriptors</p>
       </div>
     </a>
     <a class="right-next"
-       href="spring_reverb.html"
+       href="impulse_response.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Analysis and Synthesis of Spring Reverb</p>
+        <p class="prev-next-title">Impulse Response</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

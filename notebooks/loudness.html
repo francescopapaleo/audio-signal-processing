@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/loudness';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reverberation" href="reverberation.html" />
-    <link rel="prev" title="Plot Impulse Response (IR) with zoom" href="plot_ir_zoom.html" />
+    <link rel="next" title="Sweep Tone Analysis" href="sweep_tone_analysis.html" />
+    <link rel="prev" title="Normalization" href="normalization_dc_rms.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -168,41 +168,52 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals of Signal Processing</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals of Audio Signal Processing</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sound_waves.html">Sound Waves</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quantization.html">Quantization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decibels.html">Decibels (dB)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hertz.html">Hertz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="complex_numbers.html">Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_algebra_basics.html">Linear Algebra Basics with Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linear_and_non-linear_systems.html">Linear &amp; Non-Linear Systems in Discrete Time (DT)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Time and Frequency Domain Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="waveforms.html">Waveforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time_domain_analysis.html">Time Domain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fourier_transform.html">Fourier Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="convolution.html">Convolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_algebra_basics.html">Linear Algebra Basics with Numpy</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fourier Transform</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="fourier_transform.html">Fourier Transform</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Audio Analysis and Visualization</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Measuring and Analyzing Audio Signals</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="normalization_dc_rms.html">Normalization</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Loudness according to: ITU-R BS.1770-2</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="sweep_tone_analysis.html">Sweep Tone Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_audio_with_essentia.html">Plot Audio Files Waveforms and Spectrograms with Essentia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_difference.html">Plot Difference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Room Acoustics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reverberation.html">Reverberation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="impulse_response.html">Impulse Response</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_ir_waterfall.html">Impulse Response (IR): Plotting Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_ir_zoom.html">Plot Impulse Response (IR) with zoom</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Loudness according to: ITU-R BS.1770-2</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reverberation</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="reverberation.html">Reverberation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convolution_reverb.html">Convolution Reverb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback_delay_network.html">Feedback Delay Network (FDN) Reverb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spring_reverb.html">Analysis and Synthesis of Spring Reverb</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sound and Music Descriptors</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="sound_music_descriptors.html">Sound and Music Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
     </div>
@@ -257,7 +268,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=lab/tree/docs/notebooks/loudness.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/francescopapaleo/audio-signal-processing/main?urlpath=lab/tree/notebooks/loudness.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +286,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/loudness.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/francescopapaleo/audio-signal-processing/blob/main/notebooks/loudness.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,6 +299,24 @@
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
 </li>
       
   </ul>
@@ -306,7 +335,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/francescopapaleo/audio-signal-processing" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -323,7 +352,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/edit/master/docs/notebooks/loudness.ipynb" target="_blank"
+      <li><a href="https://github.com/francescopapaleo/audio-signal-processing/edit/main/notebooks/loudness.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -340,7 +369,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/loudness.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/francescopapaleo/audio-signal-processing/issues/new?title=Issue%20on%20page%20%2Fnotebooks/loudness.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -466,137 +495,14 @@
 <p>\begin{equation}
 \text{loundness} = -0.691 + 10 \log_{10} (\text{power})
 \end{equation}</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">import</span> <span class="nn">torchaudio</span>
-
-<span class="k">def</span> <span class="nf">pre_filter</span><span class="p">(</span><span class="n">audio</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">):</span>
-    <span class="c1"># Apply pre-filtering as required by the EBU R128 standard</span>
-    <span class="c1"># This might involve specific filtering operations to mimic the human ear&#39;s response</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">rlb_filter</span><span class="p">(</span><span class="n">audio</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">):</span>
-    <span class="c1"># Apply the RLB (Revised Low Frequency) weighting filter</span>
-    <span class="c1"># This is part of the EBU R128 standard for loudness measurement</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">power_mean_square</span><span class="p">(</span><span class="n">audio</span><span class="p">,</span> <span class="n">frame_size</span><span class="p">,</span> <span class="n">hop_size</span><span class="p">):</span>
-    <span class="c1"># Calculate the mean square power of the audio signal</span>
-    <span class="c1"># This involves squaring the signal and averaging it over specific frame sizes</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">gain</span><span class="p">(</span><span class="n">audio</span><span class="p">):</span>
-    <span class="c1"># Apply necessary gain adjustments as per the loudness calculation requirements</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">sum_loudness</span><span class="p">(</span><span class="n">audio</span><span class="p">):</span>
-    <span class="c1"># Sum the loudness across all frames to get the overall loudness measurement</span>
-    <span class="k">pass</span>
-
-<span class="c1"># Load audio</span>
-<span class="n">audio</span><span class="p">,</span> <span class="n">sample_rate</span> <span class="o">=</span> <span class="n">torchaudio</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./audio/IR_AKG_BX25_3500ms_48kHz24b.wav&#39;</span><span class="p">)</span>
-
-<span class="c1"># Pre-filter</span>
-<span class="n">audio</span> <span class="o">=</span> <span class="n">pre_filter</span><span class="p">(</span><span class="n">audio</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">)</span>
-
-<span class="c1"># RLB filter</span>
-<span class="n">audio</span> <span class="o">=</span> <span class="n">rlb_filter</span><span class="p">(</span><span class="n">audio</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">)</span>
-
-<span class="c1"># Power mean square</span>
-<span class="n">frame_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_rate</span> <span class="o">*</span> <span class="mf">0.4</span><span class="p">)</span>  <span class="c1"># Example for 400ms window</span>
-<span class="n">hop_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_rate</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">)</span>    <span class="c1"># Example hop size</span>
-<span class="n">audio</span> <span class="o">=</span> <span class="n">power_mean_square</span><span class="p">(</span><span class="n">audio</span><span class="p">,</span> <span class="n">frame_size</span><span class="p">,</span> <span class="n">hop_size</span><span class="p">)</span>
-
-<span class="c1"># Gain</span>
-<span class="n">audio</span> <span class="o">=</span> <span class="n">gain</span><span class="p">(</span><span class="n">audio</span><span class="p">)</span>
-
-<span class="c1"># Sum</span>
-<span class="n">loudness_metrics</span> <span class="o">=</span> <span class="n">sum_loudness</span><span class="p">(</span><span class="n">audio</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">loudness_metrics</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">LibsndfileError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">28</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="k">pass</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="c1"># Load audio</span>
-<span class="ne">---&gt; </span><span class="mi">28</span> <span class="n">audio</span><span class="p">,</span> <span class="n">sample_rate</span> <span class="o">=</span> <span class="n">torchaudio</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./audio/IR_AKG_BX25_3500ms_48kHz24b.wav&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="c1"># Pre-filter</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">audio</span> <span class="o">=</span> <span class="n">pre_filter</span><span class="p">(</span><span class="n">audio</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">)</span>
-
-<span class="nn">File ~/.pyenv/versions/3.12.7/lib/python3.12/site-packages/torchaudio/_backend/utils.py:205,</span> in <span class="ni">get_load_func.&lt;locals&gt;.load</span><span class="nt">(uri, frame_offset, num_frames, normalize, channels_first, format, buffer_size, backend)</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Load audio data from source.</span>
-<span class="g g-Whitespace">    </span><span class="mi">129</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">130</span><span class="sd"> By default (``normalize=True``, ``channels_first=True``), this function returns Tensor with</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span><span class="sd">         `[channel, time]` else `[time, channel]`.</span>
-<span class="g g-Whitespace">    </span><span class="mi">203</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">dispatcher</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">205</span> <span class="k">return</span> <span class="n">backend</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">frame_offset</span><span class="p">,</span> <span class="n">num_frames</span><span class="p">,</span> <span class="n">normalize</span><span class="p">,</span> <span class="n">channels_first</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">buffer_size</span><span class="p">)</span>
-
-<span class="nn">File ~/.pyenv/versions/3.12.7/lib/python3.12/site-packages/torchaudio/_backend/soundfile.py:27,</span> in <span class="ni">SoundfileBackend.load</span><span class="nt">(uri, frame_offset, num_frames, normalize, channels_first, format, buffer_size)</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="nd">@staticmethod</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">def</span> <span class="nf">load</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">uri</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">BinaryIO</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">PathLike</span><span class="p">],</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">buffer_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4096</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-<span class="ne">---&gt; </span><span class="mi">27</span>     <span class="k">return</span> <span class="n">soundfile_backend</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">frame_offset</span><span class="p">,</span> <span class="n">num_frames</span><span class="p">,</span> <span class="n">normalize</span><span class="p">,</span> <span class="n">channels_first</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
-
-<span class="nn">File ~/.pyenv/versions/3.12.7/lib/python3.12/site-packages/torchaudio/_backend/soundfile_backend.py:221,</span> in <span class="ni">load</span><span class="nt">(filepath, frame_offset, num_frames, normalize, channels_first, format)</span>
-<span class="g g-Whitespace">    </span><span class="mi">139</span> <span class="nd">@_requires_soundfile</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span> <span class="k">def</span> <span class="nf">load</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span>     <span class="n">filepath</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">146</span>     <span class="nb">format</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">147</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-<span class="g g-Whitespace">    </span><span class="mi">148</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Load audio data from file.</span>
-<span class="g g-Whitespace">    </span><span class="mi">149</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">150</span><span class="sd">     Note:</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span><span class="sd">             `[channel, time]` else `[time, channel]`.</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">221</span>     <span class="k">with</span> <span class="n">soundfile</span><span class="o">.</span><span class="n">SoundFile</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span>         <span class="k">if</span> <span class="n">file_</span><span class="o">.</span><span class="n">format</span> <span class="o">!=</span> <span class="s2">&quot;WAV&quot;</span> <span class="ow">or</span> <span class="n">normalize</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span>             <span class="n">dtype</span> <span class="o">=</span> <span class="s2">&quot;float32&quot;</span>
-
-<span class="nn">File ~/.pyenv/versions/3.12.7/lib/python3.12/site-packages/soundfile.py:658,</span> in <span class="ni">SoundFile.__init__</span><span class="nt">(self, file, mode, samplerate, channels, subtype, endian, format, closefd)</span>
-<span class="g g-Whitespace">    </span><span class="mi">655</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="n">mode</span>
-<span class="g g-Whitespace">    </span><span class="mi">656</span> <span class="bp">self</span><span class="o">.</span><span class="n">_info</span> <span class="o">=</span> <span class="n">_create_info_struct</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">samplerate</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">657</span>                                  <span class="nb">format</span><span class="p">,</span> <span class="n">subtype</span><span class="p">,</span> <span class="n">endian</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">658</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">mode_int</span><span class="p">,</span> <span class="n">closefd</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">659</span> <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span><span class="o">.</span><span class="n">issuperset</span><span class="p">(</span><span class="s1">&#39;r+&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">seekable</span><span class="p">():</span>
-<span class="g g-Whitespace">    </span><span class="mi">660</span>     <span class="c1"># Move write position to 0 (like in Python file objects)</span>
-<span class="g g-Whitespace">    </span><span class="mi">661</span>     <span class="bp">self</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="nn">File ~/.pyenv/versions/3.12.7/lib/python3.12/site-packages/soundfile.py:1216,</span> in <span class="ni">SoundFile._open</span><span class="nt">(self, file, mode_int, closefd)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1213</span> <span class="k">if</span> <span class="n">file_ptr</span> <span class="o">==</span> <span class="n">_ffi</span><span class="o">.</span><span class="n">NULL</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1214</span>     <span class="c1"># get the actual error code</span>
-<span class="g g-Whitespace">   </span><span class="mi">1215</span>     <span class="n">err</span> <span class="o">=</span> <span class="n">_snd</span><span class="o">.</span><span class="n">sf_error</span><span class="p">(</span><span class="n">file_ptr</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1216</span>     <span class="k">raise</span> <span class="n">LibsndfileError</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;Error opening </span><span class="si">{0!r}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-<span class="g g-Whitespace">   </span><span class="mi">1217</span> <span class="k">if</span> <span class="n">mode_int</span> <span class="o">==</span> <span class="n">_snd</span><span class="o">.</span><span class="n">SFM_WRITE</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1218</span>     <span class="c1"># Due to a bug in libsndfile version &lt;= 1.0.25, frames != 0</span>
-<span class="g g-Whitespace">   </span><span class="mi">1219</span>     <span class="c1"># when opening a named pipe in SFM_WRITE mode.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1220</span>     <span class="c1"># See http://github.com/erikd/libsndfile/issues/77.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1221</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_info</span><span class="o">.</span><span class="n">frames</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="ne">LibsndfileError</span>: Error opening &#39;./audio/IR_AKG_BX25_3500ms_48kHz24b.wav&#39;: System error.
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "francescopapaleo/audio-signal-processing",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -622,20 +528,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="plot_ir_zoom.html"
+       href="normalization_dc_rms.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Plot Impulse Response (IR) with zoom</p>
+        <p class="prev-next-title">Normalization</p>
       </div>
     </a>
     <a class="right-next"
-       href="reverberation.html"
+       href="sweep_tone_analysis.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Reverberation</p>
+        <p class="prev-next-title">Sweep Tone Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

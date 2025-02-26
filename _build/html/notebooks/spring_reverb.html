@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/spring_reverb';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="References" href="../references.html" />
+    <link rel="next" title="&lt;no title&gt;" href="audio_file_manipulation.html" />
     <link rel="prev" title="Feedback Delay Network (FDN) Reverb" href="feedback_delay_network.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -210,6 +210,11 @@
 <li class="toctree-l1"><a class="reference internal" href="convolution_reverb.html">Convolution Reverb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="feedback_delay_network.html">Feedback Delay Network (FDN) Reverb</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Analysis and Synthesis of Spring Reverb</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONDUCT.html">Code of Conduct</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -596,8 +601,6 @@
 
 <span class="c1"># Constants</span>
 <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;inferno&#39;</span><span class="p">)</span>
-<span class="n">db_to_mag</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">mag_to_db</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="n">ECHO_PERIOD</span> <span class="o">=</span> <span class="mf">55e-3</span>
 <span class="n">SWEEP_START_FREQ_HZ</span> <span class="o">=</span> <span class="mi">200</span>
@@ -627,10 +630,6 @@
 <span class="c1"># Plot 2: Synthetic Spring Reverb Impulse Response</span>
 <span class="n">time_array_spring</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">synthetic_spring_ir</span><span class="p">)</span> <span class="o">/</span> <span class="n">sr</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">synthetic_spring_ir</span><span class="p">))</span>
 
-<span class="c1"># Constants</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;inferno&#39;</span><span class="p">)</span>
-<span class="n">db_to_mag</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">mag_to_db</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="c1"># Plot 1: Impulse Response (Time Domain) and Spectrogram</span>
 <span class="n">time_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ir_sig</span><span class="p">))</span> <span class="o">/</span> <span class="n">sr</span>
@@ -704,6 +703,147 @@
 <img alt="../_images/f5cf7e4ec14899251d28f467fb7880d57b95a28bee5cdaa402cd754c8eef8081.png" src="../_images/f5cf7e4ec14899251d28f467fb7880d57b95a28bee5cdaa402cd754c8eef8081.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="k">as</span> <span class="nn">signal</span>
+<span class="kn">import</span> <span class="nn">scipy.io.wavfile</span> <span class="k">as</span> <span class="nn">wavfile</span>
+
+<span class="c1"># Define helper functions</span>
+<span class="n">db_to_mag</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">mag_to_db</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Constants</span>
+<span class="n">SPEED_OF_SOUND</span> <span class="o">=</span> <span class="mi">343</span>  <span class="c1"># Speed of sound in air (m/s)</span>
+<span class="n">ECHO_PERIOD</span> <span class="o">=</span> <span class="mf">55e-3</span>
+<span class="n">SWEEP_START_FREQ_HZ</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">SWEEP_END_FREQ_HZ</span> <span class="o">=</span> <span class="mi">3000</span>
+<span class="n">NUM_ECHOES</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="c1"># File paths</span>
+<span class="n">input_file</span> <span class="o">=</span> <span class="s2">&quot;../audio/plk-fm-base.wav&quot;</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;../audio/output_convolve.wav&quot;</span>
+<span class="n">ir_file</span> <span class="o">=</span> <span class="s2">&quot;../audio/IR_AKG_BX25_3500ms_dark_48kHz24b.wav&quot;</span>
+
+<span class="c1"># Read impulse response file</span>
+<span class="n">sr</span><span class="p">,</span> <span class="n">ir_sig</span> <span class="o">=</span> <span class="n">wavfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">ir_file</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">ir_sig</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">ir_sig</span> <span class="o">=</span> <span class="n">ir_sig</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># Convert to mono if needed</span>
+
+<span class="n">ir_sig</span> <span class="o">=</span> <span class="n">ir_sig</span><span class="p">[</span><span class="n">ir_sig</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># Remove leading/trailing zeros</span>
+
+<span class="c1"># Read input audio file</span>
+<span class="n">input_sr</span><span class="p">,</span> <span class="n">input_sig</span> <span class="o">=</span> <span class="n">wavfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">input_sig</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">input_sig</span> <span class="o">=</span> <span class="n">input_sig</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># Convert to mono if needed</span>
+
+<span class="c1"># Ensure matching sample rates</span>
+<span class="k">assert</span> <span class="n">sr</span> <span class="o">==</span> <span class="n">input_sr</span><span class="p">,</span> <span class="s2">&quot;Sample rates must match&quot;</span>
+
+<span class="c1"># Convolution with impulse response</span>
+<span class="n">wet_sig</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">fftconvolve</span><span class="p">(</span><span class="n">input_sig</span><span class="p">,</span> <span class="n">ir_sig</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;full&quot;</span><span class="p">)</span>
+<span class="n">wet_sig</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">wet_sig</span><span class="p">))</span>  <span class="c1"># Normalize</span>
+
+<span class="c1"># Mix dry and wet signal</span>
+<span class="n">dry_sig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">input_sig</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">wet_sig</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_sig</span><span class="p">)),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">)</span>
+<span class="n">output_sig</span> <span class="o">=</span> <span class="n">dry_sig</span> <span class="o">+</span> <span class="n">db_to_mag</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">wet_sig</span>
+<span class="n">output_sig</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">output_sig</span><span class="p">))</span>
+
+<span class="c1"># Save output files</span>
+<span class="n">wavfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;../audio/wet.wav&quot;</span><span class="p">,</span> <span class="n">sr</span><span class="p">,</span> <span class="n">wet_sig</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
+<span class="n">wavfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;../audio/mix.wav&quot;</span><span class="p">,</span> <span class="n">sr</span><span class="p">,</span> <span class="n">output_sig</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
+
+<span class="c1"># Generate synthetic spring reverb impulse response</span>
+<span class="n">echo_period_samples</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">ECHO_PERIOD</span> <span class="o">*</span> <span class="n">sr</span><span class="p">)</span>
+<span class="n">len_ir_samples</span> <span class="o">=</span> <span class="n">echo_period_samples</span> <span class="o">*</span> <span class="n">NUM_ECHOES</span>
+<span class="n">synthetic_spring_ir</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">len_ir_samples</span><span class="p">)</span>
+
+<span class="n">sweep_freq_env</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">SWEEP_START_FREQ_HZ</span><span class="p">,</span> <span class="n">SWEEP_END_FREQ_HZ</span><span class="p">,</span> <span class="n">echo_period_samples</span><span class="p">)</span>
+<span class="n">sweep_sig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">sweep_freq_env</span><span class="p">)</span> <span class="o">/</span> <span class="n">sr</span><span class="p">)</span>
+
+<span class="n">echo_amp</span> <span class="o">=</span> <span class="n">db_to_mag</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">echo_index</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">NUM_ECHOES</span><span class="p">)</span> <span class="o">*</span> <span class="n">echo_period_samples</span><span class="p">:</span>
+    <span class="n">sweep_index_array</span> <span class="o">=</span> <span class="n">echo_index</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sweep_sig</span><span class="p">))</span>
+    <span class="n">synthetic_spring_ir</span><span class="p">[</span><span class="n">sweep_index_array</span><span class="p">]</span> <span class="o">+=</span> <span class="n">echo_amp</span> <span class="o">*</span> <span class="n">sweep_sig</span>
+    <span class="n">echo_amp</span> <span class="o">*=</span> <span class="n">db_to_mag</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2</span><span class="p">)</span>
+
+<span class="c1"># Time arrays</span>
+<span class="n">time_array_ir</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ir_sig</span><span class="p">))</span> <span class="o">/</span> <span class="n">sr</span>
+<span class="n">time_array_spring</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">synthetic_spring_ir</span><span class="p">)</span> <span class="o">/</span> <span class="n">sr</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">synthetic_spring_ir</span><span class="p">))</span>
+
+<span class="c1"># Plot impulse response</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Plot impulse response in time domain</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_array_ir</span><span class="p">,</span> <span class="n">ir_sig</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Impulse Response (Time Domain)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>  
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Plot impulse response spectrogram</span>
+<span class="n">cax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">specgram</span><span class="p">(</span><span class="n">ir_sig</span><span class="p">,</span> <span class="n">Fs</span><span class="o">=</span><span class="n">sr</span><span class="p">,</span> <span class="n">NFFT</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">noverlap</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;inferno&quot;</span><span class="p">,</span> <span class="n">scale_by_freq</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cax</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Impulse Response (Spectrogram)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency [Hz]&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Plot synthetic spring reverb impulse response</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_array_spring</span><span class="p">,</span> <span class="n">synthetic_spring_ir</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Synthetic Spring Reverb (Time Domain)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">cax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">specgram</span><span class="p">(</span><span class="n">synthetic_spring_ir</span><span class="p">,</span> <span class="n">Fs</span><span class="o">=</span><span class="n">sr</span><span class="p">,</span> <span class="n">NFFT</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">noverlap</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;inferno&quot;</span><span class="p">,</span> <span class="n">scale_by_freq</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cax</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Synthetic Spring Reverb Spectrogram&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency [Hz]&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Apply synthetic spring reverb</span>
+<span class="n">wet_sig_spring</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">fftconvolve</span><span class="p">(</span><span class="n">input_sig</span><span class="p">,</span> <span class="n">synthetic_spring_ir</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;full&quot;</span><span class="p">)</span>
+<span class="n">wet_sig_spring</span> <span class="o">*=</span> <span class="n">db_to_mag</span><span class="p">(</span><span class="o">-</span><span class="mi">32</span><span class="p">)</span>
+
+<span class="n">dry_sig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">input_sig</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">wet_sig_spring</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_sig</span><span class="p">)),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">)</span>
+<span class="n">output_sig_spring</span> <span class="o">=</span> <span class="n">dry_sig</span> <span class="o">+</span> <span class="n">db_to_mag</span><span class="p">(</span><span class="o">-</span><span class="mi">24</span><span class="p">)</span> <span class="o">*</span> <span class="n">wet_sig_spring</span>
+
+<span class="c1"># Save processed audio</span>
+<span class="n">wavfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;../audio/synthetic_spring_reverb.wav&quot;</span><span class="p">,</span> <span class="n">sr</span><span class="p">,</span> <span class="n">output_sig_spring</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">))</span>
+
+<span class="c1"># Check for errors and repetitions</span>
+<span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ir_sig</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Impulse response file is empty or incorrectly processed.&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_sig</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Input file is empty or incorrectly processed.&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">sr</span> <span class="o">!=</span> <span class="n">input_sr</span><span class="p">:</span>
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Sample rates do not match.&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">wet_sig</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">wet_sig_spring</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Wet signal processing failed.&quot;</span><span class="p">)</span>
+
+<span class="n">errors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d6a79c4aad692fdc75502d147a7ba296e62f48198a4db654daf426cf178d7f84.png" src="../_images/d6a79c4aad692fdc75502d147a7ba296e62f48198a4db654daf426cf178d7f84.png" />
+<img alt="../_images/6b70452a675fb7ea0323b79e27cdbff705aa7d464a670db6387b2bc1a23211ad.png" src="../_images/6b70452a675fb7ea0323b79e27cdbff705aa7d464a670db6387b2bc1a23211ad.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -746,11 +886,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="../references.html"
+       href="audio_file_manipulation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

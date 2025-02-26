@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -175,7 +175,7 @@
 <li class="toctree-l1"><a class="reference internal" href="sound_waves.html">Sound Waves</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quantization.html">Quantization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decibels.html">Decibels (dB)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amplitude_power_dB.html">Amplitude, Power and Decibels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="complex_numbers.html">Complex Numbers</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Linear Algebra Basics with Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linear_and_non-linear_systems.html">Linear &amp; Non-Linear Systems in Discrete Time (DT)</a></li>
@@ -190,9 +190,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Measuring and Analyzing Audio Signals</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="normalization_dc_rms.html">Normalization</a></li>
-
-
+<li class="toctree-l1"><a class="reference internal" href="normalization_dc_rms.html">Signal Normalization, DC Offset, and RMS Measurement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loudness.html">Loudness according to: ITU-R BS.1770-2</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="sweep_tone_analysis.html">Sweep Tone Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_audio_with_essentia.html">Plot Audio Files Waveforms and Spectrograms with Essentia</a></li>
@@ -212,6 +210,15 @@
 <li class="toctree-l1"><a class="reference internal" href="convolution_reverb.html">Convolution Reverb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="feedback_delay_network.html">Feedback Delay Network (FDN) Reverb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spring_reverb.html">Analysis and Synthesis of Spring Reverb</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="working_with_audio_files.html">Working with Audio Files in Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONDUCT.html">Code of Conduct</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -523,6 +530,7 @@ Inspired by <a class="reference external" href="https://www.youtube.com/JSjWltL9
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.frameon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </div>
@@ -794,17 +802,17 @@ Matrix multiplication:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[8 3 3]
- [8 3 9]
- [4 7 8]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5 9 3]
+ [6 1 3]
+ [1 1 8]]
 
-[[8 8 4]
- [3 3 7]
- [3 9 8]]
+[[5 6 1]
+ [9 1 1]
+ [3 3 8]]
 
-[[8 3 3]
- [8 3 9]
- [4 7 8]]
+[[5 9 3]
+ [6 1 3]
+ [1 1 8]]
 </pre></div>
 </div>
 </div>
@@ -826,20 +834,20 @@ Matrix multiplication:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 5  4  0  1]
- [ 8 11 15  8]
- [ 0 15 16 13]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 7 17 11 15]
+ [ 1  5  0 18]
+ [15  3 18 19]]
 
-[[ 5  8  0]
- [ 4 11 15]
- [ 0 15 16]
- [ 1  8 13]]
+[[ 7  1 15]
+ [17  5  3]
+ [11  0 18]
+ [15 18 19]]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Transposed&#39;)
 </pre></div>
 </div>
-<img alt="../_images/34a7ac6379a4d43fee19f6c1752bd1dde064531ae212722ad81822ebfd322c01.png" src="../_images/34a7ac6379a4d43fee19f6c1752bd1dde064531ae212722ad81822ebfd322c01.png" />
+<img alt="../_images/d11ddeef33a6a026469ec2fa91c26d8dad1db35c00a1506400336981d0b512cd.png" src="../_images/d11ddeef33a6a026469ec2fa91c26d8dad1db35c00a1506400336981d0b512cd.png" />
 </div>
 </div>
 <p>Matrix multiplication with numpy <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator and <code class="docutils literal notranslate"><span class="pre">np.matmul</span></code>.</p>
@@ -863,15 +871,15 @@ Matrix multiplication:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-2.77213968 -3.31505893  3.39514473 -0.24963729]
- [ 0.53655312  3.45739659 -3.71800732  1.00455891]
- [-4.11876079 -1.22408463  0.50552431  0.12062561]
- [-0.64320033 -2.81546003 -0.1095179  -0.76953261]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.1682498  -1.24023017  0.4873097   2.28683568]
+ [ 0.44293245  0.68886644 -0.60885775  1.32666729]
+ [-1.51044869 -0.08270781 -2.81717184  5.25389098]
+ [-3.17051212 -1.761922   -2.18270292  4.42063857]]
 
-[[-2.77213968 -3.31505893  3.39514473 -0.24963729]
- [ 0.53655312  3.45739659 -3.71800732  1.00455891]
- [-4.11876079 -1.22408463  0.50552431  0.12062561]
- [-0.64320033 -2.81546003 -0.1095179  -0.76953261]]
+[[ 0.1682498  -1.24023017  0.4873097   2.28683568]
+ [ 0.44293245  0.68886644 -0.60885775  1.32666729]
+ [-1.51044869 -0.08270781 -2.81717184  5.25389098]
+ [-3.17051212 -1.761922   -2.18270292  4.42063857]]
 
 [[0. 0. 0. 0.]
  [0. 0. 0. 0.]
@@ -879,7 +887,7 @@ Matrix multiplication:
  [0. 0. 0. 0.]]
 </pre></div>
 </div>
-<img alt="../_images/9a2d357f9a4b3a974cd204a29d3286c15046899a61dfe903d9127ad45a9a6edd.png" src="../_images/9a2d357f9a4b3a974cd204a29d3286c15046899a61dfe903d9127ad45a9a6edd.png" />
+<img alt="../_images/aa3f9fb2508288e9b0f621bfd2b4bfffe152ab870d96ceb97c0403d899fc0c58.png" src="../_images/aa3f9fb2508288e9b0f621bfd2b4bfffe152ab870d96ceb97c0403d899fc0c58.png" />
 </div>
 </div>
 <p>Matrix multiplication with identity matrix.</p>
@@ -902,13 +910,13 @@ Matrix multiplication:
  [0 1 0]
  [0 0 1]]
 our random int mtx:
-[[3 4 4]
- [3 9 4]
- [7 4 1]]
+[[5 7 5]
+ [7 2 5]
+ [2 3 3]]
 matrix multiplication of I and M5:
-[[3 4 4]
- [3 9 4]
- [7 4 1]]
+[[5 7 5]
+ [7 2 5]
+ [2 3 3]]
 </pre></div>
 </div>
 </div>
@@ -938,15 +946,15 @@ $<span class="math notranslate nohighlight">\(x = A^{-1} b\)</span>$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.81087278  0.55040609  0.74735796  0.50619103]
- [-0.33692023  0.44964966 -1.78004022 -0.50923834]
- [ 0.49634031 -1.05254756 -0.3418569   0.49158158]
- [-0.24517237 -0.3531174   0.13941232 -1.35816709]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.57057166 -0.41411627  0.15230009 -0.90982698]
+ [ 0.91724343  1.01168862  0.65277717 -1.63000617]
+ [ 0.26798122  1.26321335 -0.30023935  0.12494939]
+ [-1.2121263   0.13215783 -0.79924198  0.98851725]]
 
-[[ 1.00000000e+00  2.45639755e-16  2.35166950e-16  1.63215379e-16]
- [-5.99842134e-17  1.00000000e+00  7.95525759e-17 -1.62049330e-17]
- [ 1.07134726e-18 -2.98002161e-17  1.00000000e+00  1.32208233e-17]
- [-2.85427007e-18 -1.04237671e-17 -1.47229717e-17  1.00000000e+00]]
+[[ 1.00000000e+00  1.22148690e-16  2.59666924e-17  5.65097156e-17]
+ [-6.51616453e-17  1.00000000e+00  1.48872741e-18  5.94705193e-18]
+ [-2.37843107e-16  6.83972742e-17  1.00000000e+00  4.55721104e-16]
+ [-2.35977371e-16 -1.09918106e-17  5.89223779e-17  1.00000000e+00]]
 </pre></div>
 </div>
 </div>
@@ -965,7 +973,7 @@ $<span class="math notranslate nohighlight">\(x = A^{-1} b\)</span>$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d9a3fbb3218c5a8363a1c7207baaa7135b3dd6417c1be56fb7e77c593c3d4411.png" src="../_images/d9a3fbb3218c5a8363a1c7207baaa7135b3dd6417c1be56fb7e77c593c3d4411.png" />
+<img alt="../_images/f74f2a49266f42da0ba0ac5f258765a1c02208b2f3120b5247909f579539befc.png" src="../_images/f74f2a49266f42da0ba0ac5f258765a1c02208b2f3120b5247909f579539befc.png" />
 </div>
 </div>
 <p>Create a 3x3 vector, create a diagonal matrix from it</p>

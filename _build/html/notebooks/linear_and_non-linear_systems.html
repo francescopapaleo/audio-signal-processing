@@ -173,7 +173,7 @@
 <li class="toctree-l1"><a class="reference internal" href="sound_waves.html">Sound Waves</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quantization.html">Quantization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decibels.html">Decibels (dB)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amplitude_power_dB.html">Amplitude, Power and Decibels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="complex_numbers.html">Complex Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linear_algebra_basics.html">Linear Algebra Basics with Numpy</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Linear &amp; Non-Linear Systems in Discrete Time (DT)</a></li>
@@ -188,9 +188,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Measuring and Analyzing Audio Signals</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="normalization_dc_rms.html">Normalization</a></li>
-
-
+<li class="toctree-l1"><a class="reference internal" href="normalization_dc_rms.html">Signal Normalization, DC Offset, and RMS Measurement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loudness.html">Loudness according to: ITU-R BS.1770-2</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="sweep_tone_analysis.html">Sweep Tone Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="plot_audio_with_essentia.html">Plot Audio Files Waveforms and Spectrograms with Essentia</a></li>
@@ -210,6 +208,15 @@
 <li class="toctree-l1"><a class="reference internal" href="convolution_reverb.html">Convolution Reverb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="feedback_delay_network.html">Feedback Delay Network (FDN) Reverb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spring_reverb.html">Analysis and Synthesis of Spring Reverb</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="working_with_audio_files.html">Working with Audio Files in Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONDUCT.html">Code of Conduct</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -505,6 +512,18 @@
 <p class="admonition-title">Warning</p>
 <p>This notebook is under construction.</p>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-v0_8-whitegrid&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.grid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.frameon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
 <section id="amplitude-properties">
 <h2>Amplitude properties:<a class="headerlink" href="#amplitude-properties" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
@@ -529,10 +548,7 @@
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="c1"># Create a time array and input signals</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a time array and input signals</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 <span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
@@ -565,7 +581,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/408959c5c0ec8b8f7ee5a73b74f3dd9dbba73cfe9a8678a8caee25c875b0991f.png" src="../_images/408959c5c0ec8b8f7ee5a73b74f3dd9dbba73cfe9a8678a8caee25c875b0991f.png" />
+<img alt="../_images/c4dfc4c6d89f8ad189c9e6766f722e416efae6c22faaca3df27210dd23aed1ea.png" src="../_images/c4dfc4c6d89f8ad189c9e6766f722e416efae6c22faaca3df27210dd23aed1ea.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -607,7 +623,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4b04b4f7bdd052ccc1523e40d53e01e8fb7a16e2423af5aa65be4961f2cb791c.png" src="../_images/4b04b4f7bdd052ccc1523e40d53e01e8fb7a16e2423af5aa65be4961f2cb791c.png" />
+<img alt="../_images/faba3e88eef6cf85105ac55532173e0f064657d387c5840de7369370a87fcfd7.png" src="../_images/faba3e88eef6cf85105ac55532173e0f064657d387c5840de7369370a87fcfd7.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -632,7 +648,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/333439a8d21ff5e8c4e253ea082f4df7d53c8f9a186d52ae3aa93e49cf20fe8f.png" src="../_images/333439a8d21ff5e8c4e253ea082f4df7d53c8f9a186d52ae3aa93e49cf20fe8f.png" />
+<img alt="../_images/a5e8d541793c19b3c277b7544545bd6e8077b0b456629bb4504fab3c31d64c8e.png" src="../_images/a5e8d541793c19b3c277b7544545bd6e8077b0b456629bb4504fab3c31d64c8e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -655,7 +671,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2bfbcd35e9a9b2ff51e012a1acd0c5268229dbc5977d6b8f166059d73e014e03.png" src="../_images/2bfbcd35e9a9b2ff51e012a1acd0c5268229dbc5977d6b8f166059d73e014e03.png" />
+<img alt="../_images/acd59fae5e774a04853f83606c7e239f173843a82c0e8507926ede78a7493c2c.png" src="../_images/acd59fae5e774a04853f83606c7e239f173843a82c0e8507926ede78a7493c2c.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -681,7 +697,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/140fc55629d675c5a035dfe6c8941e40d28f6cda0c3f7958dc2f4ba05db486d5.png" src="../_images/140fc55629d675c5a035dfe6c8941e40d28f6cda0c3f7958dc2f4ba05db486d5.png" />
+<img alt="../_images/4e829e354de91d03697d9a8ba7bab8ae93425b7795b02c1ebef2ca124b796ad4.png" src="../_images/4e829e354de91d03697d9a8ba7bab8ae93425b7795b02c1ebef2ca124b796ad4.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -707,7 +723,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/184b3ab765a6e1890870a0e9d4758bb15959ca5e6807e1a8e491379795acb0bd.png" src="../_images/184b3ab765a6e1890870a0e9d4758bb15959ca5e6807e1a8e491379795acb0bd.png" />
+<img alt="../_images/247bd9eb9afb112e5105abe1c725e9faa194e3b99b9dfb06b34b4019cbb488f7.png" src="../_images/247bd9eb9afb112e5105abe1c725e9faa194e3b99b9dfb06b34b4019cbb488f7.png" />
 </div>
 </div>
 <div class="cell docutils container">

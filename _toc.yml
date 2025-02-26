@@ -9,7 +9,7 @@ parts:
       - file: notebooks/sound_waves
       - file: notebooks/sampling
       - file: notebooks/quantization
-      - file: notebooks/decibels
+      - file: notebooks/amplitude_power_dB
       - file: notebooks/complex_numbers
       - file: notebooks/linear_algebra_basics
       - file: notebooks/linear_and_non-linear_systems
@@ -43,11 +43,15 @@ parts:
       - file: notebooks/feedback_delay_network
       - file: notebooks/spring_reverb
 
-  # - caption: Additional Information
-  #   chapters:
-  #     - file: CONTRIBUTING  # Contribution guidelines
-  #     - file: CONDUCT  # Code of conduct
-  #     - file: LICENSE  # License information
+  - caption: Appendix
+    chapters:
+      - file: notebooks/working_with_audio_files
+
+  - caption: Additional Information
+    chapters:
+      - file: CONTRIBUTING  # Contribution guidelines
+      - file: CONDUCT  # Code of conduct
+      - file: LICENSE  # License information
 
   - caption: References
     chapters:

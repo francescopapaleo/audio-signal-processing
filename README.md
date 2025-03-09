@@ -1,14 +1,15 @@
 # Audio Signal Processing with Python
 
-Updating and Deploying the Jupyter Book with GitHub Pages
+This repository hosts a Jupyter Book, deployed via GitHub Pages on the gh-pages branch. Below are the steps to update and redeploy the book automatically.
 
-This repository hosts a Jupyter Book, deployed via GitHub Pages on the gh-pages branch. The following steps outline how to update the book and refresh the hosted webpage.
 
 ## Prerequisites
 
 Ensure you have Jupyter Book installed:
 
     pip install jupyter-book
+
+Ensure GitHub Actions is enabled for this repository under GitHub → Settings → Actions → General.
 
 ### Use cookiecutter-jupyter-book to Generate the Project
 
@@ -18,26 +19,25 @@ If you are starting a new Jupyter Book project, you can use the official cookiec
     
     cookiecutter https://github.com/executablebooks/cookiecutter-jupyter-book
 
-It will prompt you for options (book name, author, include CI/CD, etc.).
-Important: Choose GitHub when prompted for include_ci so that it sets up the GitHub Actions workflow.
+During setup:
+
+- When prompted for `include_ci`, choose GitHub to automatically generate the GitHub Actions workflow for deployment.
 
 If you already have an existing Jupyter Book repository, you can manually add the GitHub Actions workflow in the next step.
 
-## Add the GitHub Actions Workflow
+## Adding the GitHub Actions Workflow
 
-If the cookiecutter template was not used, create the workflow manually:
+If the cookiecutter template was not used, manually create a workflow file.
 
-In your GitHub repository, navigate to:
+Navigate to your GitHub repository and create the folder (if it doesn’t exist):
 
-    .github/workflows/
+    mkdir -p .github/workflows/
 
-If the folder does not exist, create it.
+Create a new YAML workflow file:
 
-Create a new YAML file for the workflow:
+    touch .github/workflows/deploy-jupyter-book.yml
 
-    .github/workflows/deploy-jupyter-book.yml
-
-Add the following contents:
+Add the following content to deploy-jupyter-book.yml:
 
 ```
 name: Deploy Jupyter Book
@@ -45,7 +45,7 @@ name: Deploy Jupyter Book
 on:
   push:
     branches:
-      - main  # This runs the workflow whenever changes are pushed to `main`
+      - main  # Deploys whenever changes are pushed to main
 
 jobs:
   build-deploy:
@@ -69,16 +69,60 @@ jobs:
         jupyter-book build .
 
     - name: Deploy to GitHub Pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        ghp-import -n -p -f _build/html
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        ghp-import -n -p -f _build/html -b gh-pages
 ```
 
-## Push Changes to GitHub
+This workflow will:
+✅ Automatically build the Jupyter Book when main is updated.
+✅ Deploy the built book to gh-pages using GitHub Actions.
+
+### Ensuring GitHub Pages is Set Up Correctly
+
+1. Go to GitHub → Your Repository → Settings → Pages.
+1. Ensure Source is set to Deploy from a branch.
+1. Select Branch: gh-pages.
+1. Click Save if needed.
+
+### Committing and Pushing the Workflow to GitHub
 
 Once the workflow file is added, commit and push the changes:
 
     git add .github/workflows/deploy-jupyter-book.yml
 
     git commit -m "Add GitHub Actions workflow for Jupyter Book deployment"
+    
+    git push origin main
 
+To manually trigger a deployment, you can push an empty commit:
+
+    git commit --allow-empty -m "Trigger GitHub Pages deployment"
+    
+    git push origin main
+
+Checking Deployment Status
+
+Go to GitHub → Your Repository → Actions.
+Find the "Deploy Jupyter Book" workflow run.
+Ensure the build and push steps succeed.
+
+Visit the website at:
+
+    https://francescopapaleo.github.io/audio-signal-processing/
+
+
+### Ignoring Build Files Locally
+
+To avoid unnecessary Git commits, add _build/ to .gitignore:
+
+    echo "_build/" >> .gitignore
+    
+    git add .gitignore
+    
+    git commit -m "Ignore _build/ folder"
+    
     git push origin main

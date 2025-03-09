@@ -1,31 +1,84 @@
 # Audio Signal Processing with Python
 
-This cookiecutter creates a simple boilerplate for a Jupyter Book.
+Updating and Deploying the Jupyter Book with GitHub Pages
 
-## Usage
+This repository hosts a Jupyter Book, deployed via GitHub Pages on the gh-pages branch. The following steps outline how to update the book and refresh the hosted webpage.
 
-### Building the book
+## Prerequisites
 
-If you'd like to develop and/or build the Audio Signal Processing with Python book, you should:
+Ensure you have Jupyter Book installed:
 
-1. Clone this repository
-2. Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
-3. (Optional) Edit the books source files located in the `audio-signal-processing/` directory
-4. Run `jupyter-book clean audio-signal-processing/` to remove any existing builds
-5. Run `jupyter-book build audio-signal_processing/`
+    pip install jupyter-book
 
-A fully-rendered HTML version of the book will be built in `audio_signal_processing_with_python/_build/html/`.
+### Use cookiecutter-jupyter-book to Generate the Project
 
-### Hosting the book
+If you are starting a new Jupyter Book project, you can use the official cookiecutter template:
 
-Please see the [Jupyter Book documentation](https://jupyterbook.org/publish/web.html) to discover options for deploying a book online using services such as GitHub, GitLab, or Netlify.
+    pip install cookiecutter
+    
+    cookiecutter https://github.com/executablebooks/cookiecutter-jupyter-book
 
-For GitHub and GitLab deployment specifically, the [cookiecutter-jupyter-book](https://github.com/executablebooks/cookiecutter-jupyter-book) includes templates for, and information about, optional continuous integration (CI) workflow files to help easily and automatically deploy books online with GitHub or GitLab. For example, if you chose `github` for the `include_ci` cookiecutter option, your book template was created with a GitHub actions workflow file that, once pushed to GitHub, automatically renders and pushes your book to the `gh-pages` branch of your repo and hosts it on GitHub Pages when a push or pull request is made to the main branch.
+It will prompt you for options (book name, author, include CI/CD, etc.).
+Important: Choose GitHub when prompted for include_ci so that it sets up the GitHub Actions workflow.
 
-## Contributors
+If you already have an existing Jupyter Book repository, you can manually add the GitHub Actions workflow in the next step.
 
-We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/francescopapaleo/audio_signal_processing_with_python/graphs/contributors).
+## Add the GitHub Actions Workflow
 
-## Credits
+If the cookiecutter template was not used, create the workflow manually:
 
-This project is created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book).
+In your GitHub repository, navigate to:
+
+    .github/workflows/
+
+If the folder does not exist, create it.
+
+Create a new YAML file for the workflow:
+
+    .github/workflows/deploy-jupyter-book.yml
+
+Add the following contents:
+
+```
+name: Deploy Jupyter Book
+
+on:
+  push:
+    branches:
+      - main  # This runs the workflow whenever changes are pushed to `main`
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.9"
+
+    - name: Install dependencies
+      run: |
+        pip install jupyter-book ghp-import
+
+    - name: Build the Jupyter Book
+      run: |
+        jupyter-book build .
+
+    - name: Deploy to GitHub Pages
+      run: |
+        ghp-import -n -p -f _build/html
+```
+
+## Push Changes to GitHub
+
+Once the workflow file is added, commit and push the changes:
+
+    git add .github/workflows/deploy-jupyter-book.yml
+
+    git commit -m "Add GitHub Actions workflow for Jupyter Book deployment"
+
+    git push origin main

@@ -3,7 +3,7 @@ name: Deploy Jupyter Book
 on:
   push:
     branches:
-      - main  # This runs the workflow whenever changes are pushed to `main`
+      - main  # Runs on every push to main
 
 jobs:
   build-deploy:
@@ -27,5 +27,15 @@ jobs:
         jupyter-book build .
 
     - name: Deploy to GitHub Pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        ghp-import -n -p -f _build/html
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        git clone --depth 1 --branch gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
+        rsync -av --delete _build/html/ gh-pages/
+        cd gh-pages
+        git add .
+        git commit -m "Deploy Jupyter Book via GitHub Actions" || echo "No changes to commit"
+        git push origin gh-pages
+  

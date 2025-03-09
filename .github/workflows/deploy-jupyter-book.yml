@@ -1,0 +1,31 @@
+name: Deploy Jupyter Book
+
+on:
+  push:
+    branches:
+      - main  # This runs the workflow whenever changes are pushed to `main`
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.9"
+
+    - name: Install dependencies
+      run: |
+        pip install jupyter-book ghp-import
+
+    - name: Build the Jupyter Book
+      run: |
+        jupyter-book build .
+
+    - name: Deploy to GitHub Pages
+      run: |
+        ghp-import -n -p -f _build/html

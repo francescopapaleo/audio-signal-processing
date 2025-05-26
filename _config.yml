@@ -1,10 +1,10 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Audio Signal Processing with Python  # The title of the book. Will be placed in the left navbar.
-author: Francesco Papaleo  # The author of the book
-copyright: "2024"  # Copyright year to be placed in the footer
-logo: logo.png  # A path to the book logo
+title: Audio Signal Processing with Python # The title of the book. Will be placed in the left navbar.
+author: Francesco Papaleo # The author of the book
+copyright: "2024" # Copyright year to be placed in the footer
+logo: logo.png # A path to the book logo
 
 # Launch buttons for interactive content
 launch_buttons:
@@ -17,6 +17,7 @@ launch_buttons:
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+  enable_widgets: true
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -40,11 +41,9 @@ repository:
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 # HTML configuration
 html:
-  favicon: ""  # Optional: path to favicon
+  favicon: "" # Optional: path to favicon
   use_repository_button: true
   use_edit_page_button: true
   use_issues_button: true
   extra_footer: |
     <p>Made with ❤️ using Jupyter Book.</p>
-  execute:
-    enable_widgets: true

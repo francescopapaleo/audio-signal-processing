@@ -2,7 +2,6 @@
 
 This repository hosts a Jupyter Book, deployed via GitHub Pages on the gh-pages branch. Below are the steps to update and redeploy the book automatically.
 
-
 ## Prerequisites
 
 Ensure you have Jupyter Book installed:
@@ -113,7 +112,6 @@ Ensure the build and push steps succeed.
 Visit the website at:
 
     https://francescopapaleo.github.io/audio-signal-processing/
-
 
 ### Ignoring Build Files Locally
 
